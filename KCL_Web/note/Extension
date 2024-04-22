@@ -1,0 +1,26 @@
+những thứ cần cài cho vs code
+
++ C# Dev Kit hoặc C# (chọn 1 trong 2)
++ .NET Extension Pack
++ .NET Install Tool
++ NuGet Gallery
++ C# extension
+
+
+-- cài các Framework 
++ EntityFrameworkCore.SqlServer 8.0.0
++ EntityFrameworkCore.Tools 8.0.0
++ EntityFrameworkCore.Design by Microsoft 8.0.0
+
+
+-- Chạy code first
+dotnet tool install --global dotnet-ef
+dotnet build
+dotnet ef migrations add init
+dotnet ef database update
+
+
+-- Chạy database first
+dotnet tool install --global dotnet-ef
+dotnet build
+dotnet ef dbcontext scaffold "Your-Connection-String" Microsoft.EntityFrameworkCore.SqlServer --output-dir Models

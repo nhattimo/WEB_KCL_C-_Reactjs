@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:5173",
+"RedirectUrl": "",
+"LaunchCommand": "npm run dev",
+"WorkingDirectory": "E:\\CODE\\KCL\\Web_KCL_Group\\KCL_Web\\KCL_Web.Server\\..\\kcl_web.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}

@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "iumRJk4ujvTkB4cYQPmbo6bJdRdK0e5z7iwTWNY4tcU=",
+  "Source": "KCL_Web.Server",
+  "BasePath": "_content/KCL_Web.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "E:\\CODE\\KCL\\Web_KCL_Group\\KCL_Web\\kcl_web.client\\kcl_web.client.esproj",
+      "Version": 2,
+      "Source": "kcl_web.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
