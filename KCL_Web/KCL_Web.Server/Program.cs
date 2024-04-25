@@ -1,4 +1,6 @@
+using KCL_Web.Server.Interfaces;
 using KCL_Web.Server.Models;
+using KCL_Web.Server.Repository;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +17,8 @@ builder.Services.AddDbContext<KclinicKclWebsiteContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DBWebKCLGroup"));
 });
+
+builder.Services.AddScoped<IStockRepository, StockRepository>();
 
 var app = builder.Build();
 
