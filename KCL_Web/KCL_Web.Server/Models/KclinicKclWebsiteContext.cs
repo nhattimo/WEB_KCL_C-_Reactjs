@@ -19,6 +19,10 @@ public partial class KclinicKclWebsiteContext : DbContext
 
     public virtual DbSet<Comment> Comments { get; set; }
 
+    public virtual DbSet<NavList> NavLists { get; set; }
+
+    public virtual DbSet<Navigation> Navigations { get; set; }
+
     public virtual DbSet<Post> Posts { get; set; }
 
     public virtual DbSet<PostingCategory> PostingCategories { get; set; }
@@ -26,10 +30,6 @@ public partial class KclinicKclWebsiteContext : DbContext
     public virtual DbSet<Role> Roles { get; set; }
 
     public virtual DbSet<Stock> Stocks { get; set; }
-
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=103.161.112.56;Initial Catalog=KClinic_KCL_Website;User ID=kcl_thuctap;Password=Kcl2024;Trust Server Certificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -57,6 +57,24 @@ public partial class KclinicKclWebsiteContext : DbContext
             entity.HasIndex(e => e.StockId, "IX_comment_StockId");
 
             entity.HasOne(d => d.Stock).WithMany(p => p.Comments).HasForeignKey(d => d.StockId);
+        });
+
+        modelBuilder.Entity<NavList>(entity =>
+        {
+            entity.HasKey(e => e.NavListId).HasName("PK__NavLists__2C87D608CDB7A520");
+
+            entity.Property(e => e.Title).HasMaxLength(255);
+
+            entity.HasOne(d => d.Nav).WithMany(p => p.NavLists)
+                .HasForeignKey(d => d.NavId)
+                .HasConstraintName("FK_NavList_Navigations");
+        });
+
+        modelBuilder.Entity<Navigation>(entity =>
+        {
+            entity.HasKey(e => e.NavId).HasName("PK__Navigati__67283A53F4359221");
+
+            entity.Property(e => e.NavTitle).HasMaxLength(255);
         });
 
         modelBuilder.Entity<Post>(entity =>
