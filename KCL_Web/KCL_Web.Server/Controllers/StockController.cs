@@ -1,9 +1,7 @@
 using KCL_Web.Server.Dtos.Stock;
-using KCL_Web.Server.Interfaces;
 using KCL_Web.Server.Mappers;
-using KCL_Web.Server.Models;
+using KCL_Web.Server.Repository;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace KCL_Web.Server.Controllers
 {
@@ -11,12 +9,10 @@ namespace KCL_Web.Server.Controllers
     [Route("api/stock")]
     public class StockController : ControllerBase
     {
-        private readonly KclinicKclWebsiteContext _context;
-        private readonly IStockRepository _stockRepo;
-        public StockController(KclinicKclWebsiteContext context, IStockRepository stockRepo)
+        private readonly StockRepository _stockRepo;
+        public StockController(StockRepository stockRepo)
         {
             _stockRepo = stockRepo;
-            _context = context;
         }
 
         [HttpGet]

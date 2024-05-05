@@ -3,7 +3,7 @@ using KCL_Web.Server.Models;
 
 namespace KCL_Web.Server.Mappers
 {
-    public static class NavigationMapperscs
+    public static class NavigationMappers
     {
         /// <summary>
         /// Chuyển đổi từ một đối tượng Navigation thành một đối tượng NavigationDto.
@@ -13,11 +13,6 @@ namespace KCL_Web.Server.Mappers
         /// <returns>Đối tượng NavigationDto mới được tạo ra từ dữ liệu trong đối tượng Navigation.</returns>
         public static NavigationDto ToNavigationDto(this Navigation navigationModel)
         {
-            if (navigationModel == null)
-            {
-                return null; // hoặc thực hiện xử lý phù hợp tùy thuộc vào yêu cầu của bạn
-            }
-
             return new NavigationDto
             {
                 NavId = navigationModel.NavId,
