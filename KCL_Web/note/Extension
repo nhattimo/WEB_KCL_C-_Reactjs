@@ -11,6 +11,8 @@ những thứ cần cài cho vs code
 + EntityFrameworkCore.SqlServer 8.0.0
 + EntityFrameworkCore.Tools 8.0.0
 + EntityFrameworkCore.Design by Microsoft 8.0.0
++ Newtonsoft.Json
++ Microsoft.AspNetCore.Mvc.NewtonsoftJson 
 
 
 -- Chạy code first
@@ -23,4 +25,8 @@ dotnet ef database update
 -- Chạy database first
 dotnet tool install --global dotnet-ef
 dotnet build
-dotnet ef dbcontext scaffold "Your-Connection-String" Microsoft.EntityFrameworkCore.SqlServer --output-dir Models
+dotnet ef dbcontext scaffold "Data Source=103.161.112.56;Initial Catalog=KClinic_KCL_Website;User ID=kcl_thuctap;Password=Kcl2024;Trust Server Certificate=True" Microsoft.EntityFrameworkCore.SqlServer --output-dir Models -f
+
+
+-- Lệnh chạy app
+dotnet watch run
