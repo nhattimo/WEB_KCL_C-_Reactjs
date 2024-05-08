@@ -10,14 +10,16 @@ namespace KCL_Web.Server.Mappers
             return new StockDto
             {
                 Id = stockModel.Id,
-                Synbol = stockModel.Synbol,
+                Symbol = stockModel.Synbol,
                 CompanyName = stockModel.CompanyName,
                 Purchase = stockModel.Purchase,
                 LastDiv = stockModel.LastDiv,
                 Industry = stockModel.Industry,
-                MarketCup = stockModel.MarketCup
+                MarketCap = stockModel.MarketCup,
+                Comments = stockModel.Comments.Select(c => c.ToCommentDto()).ToList()
             };
         }
+
         public static Stock ToStockFromCreateDto(this CreateStockRequestDto stockDto)
         {
             return new Stock
@@ -30,5 +32,7 @@ namespace KCL_Web.Server.Mappers
                 MarketCup = stockDto.MarketCup
             };
         }
+
+        
     }
 }

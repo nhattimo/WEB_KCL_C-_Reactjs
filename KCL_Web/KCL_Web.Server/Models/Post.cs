@@ -19,5 +19,9 @@ public partial class Post
 
     public int? CategoryId { get; set; }
 
+    public DateTime? UpdatedDate { get; set; }
+
+    public byte? Status { get; set; }
+
     public virtual PostingCategory? Category { get; set; }
 }
