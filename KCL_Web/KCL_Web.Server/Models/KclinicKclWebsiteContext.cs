@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace KCL_Web.Server.Models;
 
@@ -17,6 +15,8 @@ public partial class KclinicKclWebsiteContext : DbContext
 
     public virtual DbSet<Account> Accounts { get; set; }
 
+    public virtual DbSet<Banner> Banners { get; set; }
+
     public virtual DbSet<Comment> Comments { get; set; }
 
     public virtual DbSet<NavList> NavLists { get; set; }
@@ -26,6 +26,10 @@ public partial class KclinicKclWebsiteContext : DbContext
     public virtual DbSet<Post> Posts { get; set; }
 
     public virtual DbSet<PostingCategory> PostingCategories { get; set; }
+
+    public virtual DbSet<Product> Products { get; set; }
+
+    public virtual DbSet<ProductCatogory> ProductCatogories { get; set; }
 
     public virtual DbSet<Role> Roles { get; set; }
 
@@ -43,11 +47,20 @@ public partial class KclinicKclWebsiteContext : DbContext
             entity.Property(e => e.Email)
                 .HasMaxLength(255)
                 .IsUnicode(false);
+            entity.Property(e => e.Name).HasMaxLength(255);
             entity.Property(e => e.Password).HasMaxLength(255);
 
             entity.HasOne(d => d.Role).WithMany(p => p.Accounts)
                 .HasForeignKey(d => d.RoleId)
                 .HasConstraintName("FK_Accouts_Roles");
+        });
+
+        modelBuilder.Entity<Banner>(entity =>
+        {
+            entity.HasKey(e => e.BannerId).HasName("PK__Banners__32E86A31D1992211");
+
+            entity.Property(e => e.BannerId).HasColumnName("BannerID");
+            entity.Property(e => e.BannerName).HasMaxLength(255);
         });
 
         modelBuilder.Entity<Comment>(entity =>
@@ -92,6 +105,7 @@ public partial class KclinicKclWebsiteContext : DbContext
             entity.Property(e => e.Title)
                 .HasMaxLength(255)
                 .IsUnicode(false);
+            entity.Property(e => e.UpdatedDate).HasColumnType("datetime");
 
             entity.HasOne(d => d.Category).WithMany(p => p.Posts)
                 .HasForeignKey(d => d.CategoryId)
@@ -103,6 +117,48 @@ public partial class KclinicKclWebsiteContext : DbContext
             entity.HasKey(e => e.CategoryId).HasName("PK__PostingC__19093A0BA898696E");
 
             entity.Property(e => e.CategoryName).HasMaxLength(255);
+            entity.Property(e => e.CreatedTime)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+            entity.Property(e => e.UpdatedTime).HasColumnType("datetime");
+
+            entity.HasOne(d => d.Account).WithMany(p => p.PostingCategories)
+                .HasForeignKey(d => d.AccountId)
+                .HasConstraintName("FK_PostingCategories_Accounts");
+        });
+
+        modelBuilder.Entity<Product>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Products__3214EC07993F932B");
+
+            entity.Property(e => e.AddedTime)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+            entity.Property(e => e.Description).HasColumnType("ntext");
+            entity.Property(e => e.UpdatedTime).HasColumnType("datetime");
+
+            entity.HasOne(d => d.Account).WithMany(p => p.Products)
+                .HasForeignKey(d => d.AccountId)
+                .HasConstraintName("FK__Products__Accoun__6754599E");
+
+            entity.HasOne(d => d.Catogory).WithMany(p => p.Products)
+                .HasForeignKey(d => d.CatogoryId)
+                .HasConstraintName("FK_Products_ProductCatogories");
+        });
+
+        modelBuilder.Entity<ProductCatogory>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__ProductC__3214EC07860C314F");
+
+            entity.Property(e => e.CreatedTime)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+            entity.Property(e => e.Name).HasMaxLength(255);
+            entity.Property(e => e.UpdatedTime).HasColumnType("datetime");
+
+            entity.HasOne(d => d.Account).WithMany(p => p.ProductCatogories)
+                .HasForeignKey(d => d.AccountId)
+                .HasConstraintName("FK_ProductCatogories");
         });
 
         modelBuilder.Entity<Role>(entity =>

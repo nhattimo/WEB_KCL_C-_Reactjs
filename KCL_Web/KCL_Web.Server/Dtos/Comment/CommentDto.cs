@@ -8,7 +8,7 @@ namespace KCL_Web.Server.Dtos.Comment
 
         public string Conten { get; set; } = null!;
 
-        public DateTime CreatedOn { get; set; }
+        public DateTime CreatedOn { get; set; } = DateTime.Now;
 
         public int? StockId { get; set; }
 

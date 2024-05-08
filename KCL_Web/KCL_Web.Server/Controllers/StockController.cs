@@ -1,6 +1,6 @@
 using KCL_Web.Server.Dtos.Stock;
+using KCL_Web.Server.Interfaces;
 using KCL_Web.Server.Mappers;
-using KCL_Web.Server.Repository;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KCL_Web.Server.Controllers
@@ -9,8 +9,9 @@ namespace KCL_Web.Server.Controllers
     [Route("api/stock")]
     public class StockController : ControllerBase
     {
-        private readonly StockRepository _stockRepo;
-        public StockController(StockRepository stockRepo)
+        private readonly IStockRepository _stockRepo;
+
+        public StockController(IStockRepository stockRepo)
         {
             _stockRepo = stockRepo;
         }
@@ -24,7 +25,7 @@ namespace KCL_Web.Server.Controllers
         }
 
 
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public async Task<IActionResult> GetById([FromRoute] int id)
         {
             var stock = await _stockRepo.GetByIdAsync(id);
@@ -44,7 +45,7 @@ namespace KCL_Web.Server.Controllers
         }
 
         [HttpPut]
-        [Route("{id}")]
+        [Route("{id:int}")]
         public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateStockRequestDto updateDto)
         {
             if (id <= 0)
@@ -63,7 +64,7 @@ namespace KCL_Web.Server.Controllers
 
 
         [HttpDelete]
-        [Route("{id}")]
+        [Route("{id:int}")]
         public async Task<IActionResult> Delete([FromRoute] int id)
         {
             var stockModel = await _stockRepo.DeleteAsync(id);

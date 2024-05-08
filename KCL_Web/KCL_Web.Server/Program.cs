@@ -14,6 +14,13 @@ builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddControllers()
+    .AddNewtonsoftJson(options =>
+    {
+        options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+    });
+
+
 
 // 2.Đăng ký DbContext của Entity Framework Core:
 // Bạn đang đăng ký một đối tượng DbContext của Entity Framework Core 
@@ -31,6 +38,7 @@ builder.Services.AddDbContext<KclinicKclWebsiteContext>(options =>
 builder.Services.AddScoped<IStockRepository, StockRepository>();
 builder.Services.AddScoped<ICommentRepository, CommentRepository>();
 builder.Services.AddScoped<INavigationRepository, NavigationRepository>();
+builder.Services.AddScoped<IRoleRepository, RoleRepository>();
 
 // Tạo ra một đối tượng ứng dụng (app) từ đối tượng builder đã được xây dựng trước đó.
 // Điều này là cần thiết để có thể tiếp tục cấu hình và chạy ứng dụng

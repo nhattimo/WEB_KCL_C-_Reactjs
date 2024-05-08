@@ -23,7 +23,7 @@ namespace KCL_Web.Server.Controllers
             return Ok(navigationDto);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public async Task<IActionResult> GetById([FromRoute] int id)
         {
             if (id <= 0)
@@ -49,7 +49,7 @@ namespace KCL_Web.Server.Controllers
         }
 
         [HttpPut]
-        [Route("{id}")]
+        [Route("{id:int}")]
         public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateNavigationRequestDto updateDto)
         {
             if (id <= 0)
@@ -69,7 +69,7 @@ namespace KCL_Web.Server.Controllers
         }
 
         [HttpDelete]
-        [Route("{id}")]
+        [Route("{id:int}")]
         public async Task<IActionResult> Delete([FromRoute] int id)
         {
             if (id <= 0)

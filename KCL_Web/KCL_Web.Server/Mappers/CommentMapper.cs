@@ -16,5 +16,24 @@ namespace KCL_Web.Server.Mappers
                 StockId = commentModel.StockId,
             };
         }
+
+        public static Comment ToCommentFromCreate(this CreateCommentDto commentDto, int stockId)
+        {
+            return new Comment
+            {
+                Title = commentDto.Title,
+                Conten = commentDto.Conten,
+                StockId = stockId
+            };
+        }
+
+        public static Comment ToCommentFromUpdate(this UpdateCommentRequestDto commentDto)
+        {
+            return new Comment
+            {
+                Title = commentDto.Title,
+                Conten = commentDto.Conten
+            };
+        }
     }
 }
