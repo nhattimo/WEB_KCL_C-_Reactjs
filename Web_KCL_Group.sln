@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KCL_Web", "KCL_Web", "{FA5E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KCL_Web.Server", "KCL_Web\KCL_Web.Server\KCL_Web.Server.csproj", "{A52C9667-B92F-4B4D-A03C-4750868F43F7}"
 EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "kcl_web.client", "KCL_Web\kcl_web.client\kcl_web.client.esproj", "{4AD20608-D209-4234-8A31-C6CC5BB6A883}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +19,19 @@ Global
 		{A52C9667-B92F-4B4D-A03C-4750868F43F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A52C9667-B92F-4B4D-A03C-4750868F43F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A52C9667-B92F-4B4D-A03C-4750868F43F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AD20608-D209-4234-8A31-C6CC5BB6A883}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AD20608-D209-4234-8A31-C6CC5BB6A883}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AD20608-D209-4234-8A31-C6CC5BB6A883}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4AD20608-D209-4234-8A31-C6CC5BB6A883}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AD20608-D209-4234-8A31-C6CC5BB6A883}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AD20608-D209-4234-8A31-C6CC5BB6A883}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A52C9667-B92F-4B4D-A03C-4750868F43F7} = {FA5E84C6-4C91-4D73-B48D-DCCB6EF502B1}
+		{4AD20608-D209-4234-8A31-C6CC5BB6A883} = {FA5E84C6-4C91-4D73-B48D-DCCB6EF502B1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B2355F9B-4EA9-47FD-BC3C-C4C2D90402C3}
