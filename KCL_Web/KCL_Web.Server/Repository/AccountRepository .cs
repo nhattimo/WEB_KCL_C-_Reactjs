@@ -15,20 +15,6 @@ namespace KCL_Web.Server.Repository
             _context = context;
         }
 
-        public async Task<Account> CreateAsync(Account accountModel, int roleId)
-        {
-            var role = await _context.Roles.FindAsync(roleId);
-            if (role == null)
-            {
-                throw new ArgumentException("Invalid roleId");
-            }
-            accountModel.Role = role;
-
-            await _context.Accounts.AddAsync(accountModel);
-            await _context.SaveChangesAsync();
-            return accountModel;
-        }
-
         public async Task<Account?> DeleteByEmailAsync(string email)
         {
             var accountToDelete = await _context.Accounts.FirstOrDefaultAsync(a => a.Email == email);
