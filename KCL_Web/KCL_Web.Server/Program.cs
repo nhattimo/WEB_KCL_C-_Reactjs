@@ -35,6 +35,8 @@ builder.Services.AddDbContext<KclinicKclWebsiteContext>(options =>
 // Đây là cách đăng ký một repository (StockRepository) 
 // với một interface (IStockRepository) trong container dịch vụ. 
 // Điều này giúp giảm bớt sự phụ thuộc giữa các lớp và tạo điều kiện cho việc sử dụng Dependency Injection.
+builder.Services.AddScoped<IAccountRepository, AccountRepository>();
+
 builder.Services.AddScoped<IStockRepository, StockRepository>();
 builder.Services.AddScoped<ICommentRepository, CommentRepository>();
 

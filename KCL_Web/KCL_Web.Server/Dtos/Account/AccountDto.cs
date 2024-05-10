@@ -14,8 +14,7 @@ namespace KCL_Web.Server.Dtos.Account
 
         public DateTime? CreatedDate { get; set; } = DateTime.Now;
 
-        public int? RoleId { get; set; }
-
         public string? Name { get; set; }
+        public int? RoleId { get; set; }
     }
 }
