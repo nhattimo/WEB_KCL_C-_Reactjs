@@ -45,6 +45,11 @@ namespace KCL_Web.Server.Repository
             return await _context.Navigations.FindAsync(id);
         }
 
+        public Task<bool> NavigationExists(int id)
+        {
+            return _context.Navigations.AnyAsync(s => s.NavId == id);
+        }
+
         public async Task<Navigation?> UpdateAsync(int id, UpdateNavigationRequestDto navigationDto)
         {
             var existingNavigation = await _context.Navigations.FirstOrDefaultAsync(x => x.NavId == id);

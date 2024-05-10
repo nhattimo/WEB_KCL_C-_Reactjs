@@ -52,7 +52,7 @@ namespace KCL_Web.Server.Controllers
                 return BadRequest("Stock does not exist");
             }
 
-            var CommentModel = commentDto.ToCommentFromCreate(stockId);
+            var CommentModel = commentDto.ToCommentFromCreateDto(stockId);
             await _commentRepo.CreateAsync(CommentModel);
             return CreatedAtAction(nameof(GetById), new { id = CommentModel.Id }, CommentModel.ToCommentDto());
         }
@@ -61,7 +61,7 @@ namespace KCL_Web.Server.Controllers
         [Route("{id:int}")]
         public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateCommentRequestDto updateComment)
         {
-            var comment = await _commentRepo.UpdateAsync(id, updateComment.ToCommentFromUpdate());
+            var comment = await _commentRepo.UpdateAsync(id, updateComment.ToCommentFromUpdateDto(id));
             if (comment == null)
             {
                 return null;

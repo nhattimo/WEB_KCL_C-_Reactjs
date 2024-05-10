@@ -17,7 +17,7 @@ namespace KCL_Web.Server.Mappers
             };
         }
 
-        public static Comment ToCommentFromCreate(this CreateCommentDto commentDto, int stockId)
+        public static Comment ToCommentFromCreateDto(this CreateCommentDto commentDto, int stockId)
         {
             return new Comment
             {
@@ -27,12 +27,14 @@ namespace KCL_Web.Server.Mappers
             };
         }
 
-        public static Comment ToCommentFromUpdate(this UpdateCommentRequestDto commentDto)
+        public static Comment ToCommentFromUpdateDto(this UpdateCommentRequestDto commentDto, int stockId)
         {
             return new Comment
             {
                 Title = commentDto.Title,
-                Conten = commentDto.Conten
+                Conten = commentDto.Conten,
+                StockId = stockId
+
             };
         }
     }

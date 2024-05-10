@@ -1,6 +1,6 @@
 namespace KCL_Web.Server.Dtos.NavList
 {
-    public class CreateNavListDto
+    public class UpdateNavListRequestDto
     {
         public string? Title { get; set; }
 
