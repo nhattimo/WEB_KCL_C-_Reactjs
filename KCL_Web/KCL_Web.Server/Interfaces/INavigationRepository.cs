@@ -10,5 +10,7 @@ namespace KCL_Web.Server.Interfaces
         Task<Navigation> CreateAsync(Navigation navigationModel);
         Task<Navigation?> UpdateAsync(int id, UpdateNavigationRequestDto navigationDto);
         Task<Navigation?> DeleteAsync(int id);
+        public Task<bool> NavigationExists(int id);
+       
     }
 }

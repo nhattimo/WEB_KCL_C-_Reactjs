@@ -37,7 +37,10 @@ builder.Services.AddDbContext<KclinicKclWebsiteContext>(options =>
 // Điều này giúp giảm bớt sự phụ thuộc giữa các lớp và tạo điều kiện cho việc sử dụng Dependency Injection.
 builder.Services.AddScoped<IStockRepository, StockRepository>();
 builder.Services.AddScoped<ICommentRepository, CommentRepository>();
+
 builder.Services.AddScoped<INavigationRepository, NavigationRepository>();
+builder.Services.AddScoped<INavListRepository, NavListRepository>();
+
 builder.Services.AddScoped<IRoleRepository, RoleRepository>();
 
 // Tạo ra một đối tượng ứng dụng (app) từ đối tượng builder đã được xây dựng trước đó.
