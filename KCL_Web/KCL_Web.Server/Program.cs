@@ -43,6 +43,9 @@ builder.Services.AddScoped<INavListRepository, NavListRepository>();
 
 builder.Services.AddScoped<IRoleRepository, RoleRepository>();
 
+builder.Services.AddScoped<IBannerRepository, BannerRepository>();
+
+
 // Tạo ra một đối tượng ứng dụng (app) từ đối tượng builder đã được xây dựng trước đó.
 // Điều này là cần thiết để có thể tiếp tục cấu hình và chạy ứng dụng
 var app = builder.Build();
