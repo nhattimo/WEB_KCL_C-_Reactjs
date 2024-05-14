@@ -1,10 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Identity;
 
 namespace KCL_Web.Server.Models;
 
 public partial class Account
 {
+    [Key]
     public int AccountId { get; set; }
 
     public string? Email { get; set; }
@@ -19,11 +21,11 @@ public partial class Account
 
     public string? Name { get; set; }
 
-    public virtual ICollection<PostingCategory> PostingCategories { get; set; } = new List<PostingCategory>();
+    // public virtual ICollection<PostingCategory> PostingCategories { get; set; } = new List<PostingCategory>();
 
-    public virtual ICollection<ProductCatogory> ProductCatogories { get; set; } = new List<ProductCatogory>();
+    // public virtual ICollection<ProductCatogory> ProductCatogories { get; set; } = new List<ProductCatogory>();
 
-    public virtual ICollection<Product> Products { get; set; } = new List<Product>();
+    // public virtual ICollection<Product> Products { get; set; } = new List<Product>();
 
-    public virtual Role? Role { get; set; }
+    // public virtual Role? Role { get; set; }
 }
