@@ -12,12 +12,12 @@ namespace KCL_Web.Server.Controllers
     public class AccountController : ControllerBase
     {
         private readonly UserManager<AppUser> _userManager;
-        //private readonly ITokenService _tokenService;
+        private readonly ITokenService _tokenService;
         private readonly SignInManager<AppUser> _signinManager;
-        public AccountController(UserManager<AppUser> userManager,  SignInManager<AppUser> signInManager)
+        public AccountController(UserManager<AppUser> userManager, ITokenService tokenService, SignInManager<AppUser> signInManager)
         {
             _userManager = userManager;
-            //_tokenService = tokenService;
+            _tokenService = tokenService;
             _signinManager = signInManager;
         }
 
@@ -36,13 +36,12 @@ namespace KCL_Web.Server.Controllers
             if (!result.Succeeded) return Unauthorized("Username not found and/or password incorrect");
 
             return Ok(
-                // new NewUserDto
-                // {
-                //     UserName = user.UserName,
-                //     Email = user.Email,
-                //     Token = _tokenService.CreateToken(user)
-                // }
-                "OK"
+                new NewUserDto
+                {
+                    UserName = user.UserName,
+                    Email = user.Email,
+                    Token = _tokenService.CreateToken(user)
+                }
             );
         }
 
@@ -68,13 +67,12 @@ namespace KCL_Web.Server.Controllers
                     if (roleResult.Succeeded)
                     {
                         return Ok(
-                            // new NewUserDto
-                            // {
-                            //     UserName = appUser.UserName,
-                            //     Email = appUser.Email,
-                            //     Token = _tokenService.CreateToken(appUser)
-                            // }
-                            "User Created"
+                            new NewUserDto
+                            {
+                                UserName = appUser.UserName,
+                                Email = appUser.Email,
+                                Token = _tokenService.CreateToken(appUser)
+                            }
                         );
                     }
                     else

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace KCL_Web.Server.Models;
 
@@ -24,4 +25,8 @@ public partial class Post
     // Khóa ngoại cho mối quan hệ một-nhiều với PostingCategory
     public int? CategoryId { get; set; }
     public virtual PostingCategory? Category { get; set; }
+
+    public string? AppUserId { get; set; }
+    [ForeignKey("AppUserId")]
+    public virtual AppUser? AppUser { get; set; }
 }
