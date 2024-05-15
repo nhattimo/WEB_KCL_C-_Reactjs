@@ -1,6 +1,7 @@
 using KCL_Web.Server.Interfaces;
 using KCL_Web.Server.Models;
 using KCL_Web.Server.Repository;
+using KCL_Web.Server.Service;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -81,6 +82,8 @@ builder.Services.AddScoped<INavListRepository, NavListRepository>();
 builder.Services.AddScoped<IRoleRepository, RoleRepository>();
 
 builder.Services.AddScoped<IBannerRepository, BannerRepository>();
+
+builder.Services.AddScoped<ITokenService, TokenService>();
 
 
 

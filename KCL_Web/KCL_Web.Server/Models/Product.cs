@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace KCL_Web.Server.Models;
 
@@ -15,11 +16,13 @@ public partial class Product
 
     public byte? Status { get; set; }
 
-    // Khóa ngoại cho mối quan hệ một-nhiều với ProductCatogory
-    public int? CatogoryId { get; set; }
-    public virtual ProductCatogory? Catogory { get; set; }
+    // Khóa ngoại cho mối quan hệ một-nhiều với ProductCategory
+    public int? CategoryId { get; set; }
+    [ForeignKey("CategoryId")]
+    public virtual ProductCategory? Category { get; set; }
 
-    // Khóa ngoại cho mối quan hệ một-nhiều với Portfolio
-    public int? PortfolioId { get; set; }
-    public virtual Portfolio? Portfolio { get; set; }
+    // Khóa ngoại cho mối quan hệ một-nhiều với AppUser
+    public string? AppUserId { get; set; }
+    [ForeignKey("AppUserId")]
+    public virtual AppUser? AppUser { get; set; }
 }

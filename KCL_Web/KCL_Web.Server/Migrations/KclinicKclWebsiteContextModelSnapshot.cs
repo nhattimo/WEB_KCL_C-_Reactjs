@@ -63,9 +63,15 @@ namespace KCL_Web.Server.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
+                    b.Property<byte?>("Active")
+                        .HasColumnType("tinyint");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
                         .HasMaxLength(256)
@@ -79,6 +85,9 @@ namespace KCL_Web.Server.Migrations
 
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NormalizedEmail")
                         .HasMaxLength(256)
@@ -211,49 +220,6 @@ namespace KCL_Web.Server.Migrations
                     b.ToTable("Navigations");
                 });
 
-            modelBuilder.Entity("KCL_Web.Server.Models.Portfolio", b =>
-                {
-                    b.Property<string>("AppUserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<byte?>("Active")
-                        .HasColumnType("tinyint");
-
-                    b.Property<string>("AppUserId1")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<DateTime?>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Password")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("PostingCategoryId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProductCatogoryId")
-                        .HasColumnType("int");
-
-                    b.HasKey("AppUserId");
-
-                    b.HasIndex("AppUserId1");
-
-                    b.HasIndex("PostingCategoryId")
-                        .IsUnique();
-
-                    b.HasIndex("ProductCatogoryId")
-                        .IsUnique();
-
-                    b.ToTable("Portfolios");
-                });
-
             modelBuilder.Entity("KCL_Web.Server.Models.Post", b =>
                 {
                     b.Property<int>("PostId")
@@ -261,6 +227,9 @@ namespace KCL_Web.Server.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PostId"));
+
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("AuthorName")
                         .HasColumnType("nvarchar(max)");
@@ -288,6 +257,8 @@ namespace KCL_Web.Server.Migrations
 
                     b.HasKey("PostId");
 
+                    b.HasIndex("AppUserId");
+
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Posts");
@@ -301,14 +272,14 @@ namespace KCL_Web.Server.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryId"));
 
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("CategoryName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("CreatedTime")
                         .HasColumnType("datetime2");
-
-                    b.Property<int?>("PortfolioId")
-                        .HasColumnType("int");
 
                     b.Property<byte?>("Status")
                         .HasColumnType("tinyint");
@@ -317,6 +288,8 @@ namespace KCL_Web.Server.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("CategoryId");
+
+                    b.HasIndex("AppUserId");
 
                     b.ToTable("PostingCategories");
                 });
@@ -332,17 +305,14 @@ namespace KCL_Web.Server.Migrations
                     b.Property<DateTime?>("AddedTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("CatogoryId")
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int?>("CategoryId")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PortfolioAppUserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int?>("PortfolioId")
-                        .HasColumnType("int");
 
                     b.Property<byte?>("Status")
                         .HasColumnType("tinyint");
@@ -352,14 +322,14 @@ namespace KCL_Web.Server.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CatogoryId");
+                    b.HasIndex("AppUserId");
 
-                    b.HasIndex("PortfolioAppUserId");
+                    b.HasIndex("CategoryId");
 
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("KCL_Web.Server.Models.ProductCatogory", b =>
+            modelBuilder.Entity("KCL_Web.Server.Models.ProductCategory", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -367,14 +337,14 @@ namespace KCL_Web.Server.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<DateTime?>("CreatedTime")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("PortfolioId")
-                        .HasColumnType("int");
 
                     b.Property<byte?>("Status")
                         .HasColumnType("tinyint");
@@ -384,7 +354,9 @@ namespace KCL_Web.Server.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ProductCatogories");
+                    b.HasIndex("AppUserId");
+
+                    b.ToTable("ProductCategorys");
                 });
 
             modelBuilder.Entity("KCL_Web.Server.Models.Role", b =>
@@ -470,13 +442,13 @@ namespace KCL_Web.Server.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "b63a6847-c9af-409c-a31c-833f8ed8fb78",
+                            Id = "db062853-2999-462d-b77a-5b12e08837d3",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "71310366-5418-4e26-86d3-bd37c64e6ea9",
+                            Id = "6a5e8357-1fa8-4d49-928b-c2988cbafc74",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -613,55 +585,52 @@ namespace KCL_Web.Server.Migrations
                     b.Navigation("Nav");
                 });
 
-            modelBuilder.Entity("KCL_Web.Server.Models.Portfolio", b =>
-                {
-                    b.HasOne("KCL_Web.Server.Models.AppUser", "AppUser")
-                        .WithMany("Portfolios")
-                        .HasForeignKey("AppUserId1")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("KCL_Web.Server.Models.PostingCategory", "PostingCategories")
-                        .WithOne("Portfolio")
-                        .HasForeignKey("KCL_Web.Server.Models.Portfolio", "PostingCategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("KCL_Web.Server.Models.ProductCatogory", "ProductCatogories")
-                        .WithOne("Portfolio")
-                        .HasForeignKey("KCL_Web.Server.Models.Portfolio", "ProductCatogoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("AppUser");
-
-                    b.Navigation("PostingCategories");
-
-                    b.Navigation("ProductCatogories");
-                });
-
             modelBuilder.Entity("KCL_Web.Server.Models.Post", b =>
                 {
+                    b.HasOne("KCL_Web.Server.Models.AppUser", "AppUser")
+                        .WithMany()
+                        .HasForeignKey("AppUserId");
+
                     b.HasOne("KCL_Web.Server.Models.PostingCategory", "Category")
                         .WithMany("Posts")
                         .HasForeignKey("CategoryId");
 
+                    b.Navigation("AppUser");
+
                     b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("KCL_Web.Server.Models.PostingCategory", b =>
+                {
+                    b.HasOne("KCL_Web.Server.Models.AppUser", "AppUser")
+                        .WithMany("PostingCategories")
+                        .HasForeignKey("AppUserId");
+
+                    b.Navigation("AppUser");
                 });
 
             modelBuilder.Entity("KCL_Web.Server.Models.Product", b =>
                 {
-                    b.HasOne("KCL_Web.Server.Models.ProductCatogory", "Catogory")
+                    b.HasOne("KCL_Web.Server.Models.AppUser", "AppUser")
                         .WithMany("Products")
-                        .HasForeignKey("CatogoryId");
+                        .HasForeignKey("AppUserId");
 
-                    b.HasOne("KCL_Web.Server.Models.Portfolio", "Portfolio")
+                    b.HasOne("KCL_Web.Server.Models.ProductCategory", "Category")
                         .WithMany("Products")
-                        .HasForeignKey("PortfolioAppUserId");
+                        .HasForeignKey("CategoryId");
 
-                    b.Navigation("Catogory");
+                    b.Navigation("AppUser");
 
-                    b.Navigation("Portfolio");
+                    b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("KCL_Web.Server.Models.ProductCategory", b =>
+                {
+                    b.HasOne("KCL_Web.Server.Models.AppUser", "AppUser")
+                        .WithMany("ProductCategorys")
+                        .HasForeignKey("AppUserId");
+
+                    b.Navigation("AppUser");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -717,7 +686,11 @@ namespace KCL_Web.Server.Migrations
 
             modelBuilder.Entity("KCL_Web.Server.Models.AppUser", b =>
                 {
-                    b.Navigation("Portfolios");
+                    b.Navigation("PostingCategories");
+
+                    b.Navigation("ProductCategorys");
+
+                    b.Navigation("Products");
                 });
 
             modelBuilder.Entity("KCL_Web.Server.Models.Navigation", b =>
@@ -725,22 +698,13 @@ namespace KCL_Web.Server.Migrations
                     b.Navigation("NavLists");
                 });
 
-            modelBuilder.Entity("KCL_Web.Server.Models.Portfolio", b =>
-                {
-                    b.Navigation("Products");
-                });
-
             modelBuilder.Entity("KCL_Web.Server.Models.PostingCategory", b =>
                 {
-                    b.Navigation("Portfolio");
-
                     b.Navigation("Posts");
                 });
 
-            modelBuilder.Entity("KCL_Web.Server.Models.ProductCatogory", b =>
+            modelBuilder.Entity("KCL_Web.Server.Models.ProductCategory", b =>
                 {
-                    b.Navigation("Portfolio");
-
                     b.Navigation("Products");
                 });
 
