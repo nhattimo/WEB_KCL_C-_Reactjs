@@ -113,7 +113,7 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Microsoft.AspNetCore.SpaProxy/8.0.4": {
+      "Microsoft.AspNetCore.SpaProxy/8.0.5": {
         "type": "package",
         "compile": {
           "lib/net8.0/Microsoft.AspNetCore.SpaProxy.dll": {}
@@ -1800,10 +1800,10 @@
         "microsoft.aspnetcore.mvc.newtonsoftjson.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.SpaProxy/8.0.4": {
-      "sha512": "knuNBv+I6bYjaUHb6KoFEU7CjkKgzwHQWmdcMgUZ8DuLzQQxSS8dd/OacVccaKtTEz5PDFDeIKU8Gg+Pgu+Xvw==",
+    "Microsoft.AspNetCore.SpaProxy/8.0.5": {
+      "sha512": "7iEMQelKbwKS5Lk79d/yTOqYSiLPq/wB07Gx4FaFUmF4cv+jtR7vWE55ODaioM+WOHV/ke9HqBCrpfilaaG/Vw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.spaproxy/8.0.4",
+      "path": "microsoft.aspnetcore.spaproxy/8.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1811,7 +1811,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "build/Microsoft.AspNetCore.SpaProxy.targets",
         "lib/net8.0/Microsoft.AspNetCore.SpaProxy.dll",
-        "microsoft.aspnetcore.spaproxy.8.0.4.nupkg.sha512",
+        "microsoft.aspnetcore.spaproxy.8.0.5.nupkg.sha512",
         "microsoft.aspnetcore.spaproxy.nuspec"
       ]
     },
@@ -4750,33 +4750,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\KINHTHANH\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\nguye\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj",
+      "projectUniqueName": "E:\\CODE\\KCL\\Web_KCL_Group\\KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj",
       "projectName": "KCL_Web.Server",
-      "projectPath": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj",
-      "packagesPath": "C:\\Users\\KINHTHANH\\.nuget\\packages\\",
-      "outputPath": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\obj\\",
+      "projectPath": "E:\\CODE\\KCL\\Web_KCL_Group\\KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj",
+      "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
+      "outputPath": "E:\\CODE\\KCL\\Web_KCL_Group\\KCL_Web\\KCL_Web.Server\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\KINHTHANH\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.2.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\DevExpress 19.2\\Components\\System\\Components\\Packages": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
-        "https://api.nuget.org/v3/index.json": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4854,7 +4846,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
