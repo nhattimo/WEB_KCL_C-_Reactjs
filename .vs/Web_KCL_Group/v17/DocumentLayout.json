@@ -1,9 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\CODE\\KCL\\Web_KCL_Group\\",
+  "WorkspaceRootPath": "E:\\Cuoi cung\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\kcl\\web_kcl_group\\kcl_web\\kcl_web.server\\repository\\stockrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\cuoi cung\\kcl_web\\kcl_web.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\cuoi cung\\kcl_web\\kcl_web.server\\repository\\stockrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\repository\\stockrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -14,20 +18,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "StockRepository.cs",
-              "DocumentMoniker": "E:\\CODE\\KCL\\Web_KCL_Group\\KCL_Web\\KCL_Web.Server\\Repository\\StockRepository.cs",
-              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Repository\\StockRepository.cs",
-              "ToolTip": "E:\\CODE\\KCL\\Web_KCL_Group\\KCL_Web\\KCL_Web.Server\\Repository\\StockRepository.cs",
-              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Repository\\StockRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T09:32:41.351Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Bookmark",
@@ -36,6 +35,42 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Cuoi cung\\KCL_Web\\KCL_Web.Server\\Program.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Program.cs",
+              "ToolTip": "E:\\Cuoi cung\\KCL_Web\\KCL_Web.Server\\Program.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T10:31:24.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StockRepository.cs",
+              "DocumentMoniker": "E:\\Cuoi cung\\KCL_Web\\KCL_Web.Server\\Repository\\StockRepository.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Repository\\StockRepository.cs",
+              "ToolTip": "E:\\Cuoi cung\\KCL_Web\\KCL_Web.Server\\Repository\\StockRepository.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Repository\\StockRepository.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAowBIAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T09:32:41.351Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1858,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             }
           ]
         }
