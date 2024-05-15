@@ -1,7 +1,6 @@
 using KCL_Web.Server.Dtos.Banner;
 using KCL_Web.Server.Interfaces;
 using KCL_Web.Server.Mappers;
-using KCL_Web.Server.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KCL_Web.Server.Controllers

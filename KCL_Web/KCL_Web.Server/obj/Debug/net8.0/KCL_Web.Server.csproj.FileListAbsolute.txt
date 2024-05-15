@@ -142,3 +142,5 @@ E:\CODE\KCL\Web_KCL_Group\KCL_Web\KCL_Web.Server\bin\Debug\net8.0\Microsoft.AspN
 E:\CODE\KCL\Web_KCL_Group\KCL_Web\KCL_Web.Server\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 E:\CODE\KCL\Web_KCL_Group\KCL_Web\KCL_Web.Server\bin\Debug\net8.0\Newtonsoft.Json.dll
 E:\CODE\KCL\Web_KCL_Group\KCL_Web\KCL_Web.Server\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+E:\CODE\KCL\Web_KCL_Group\KCL_Web\KCL_Web.Server\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\CODE\KCL\Web_KCL_Group\KCL_Web\KCL_Web.Server\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

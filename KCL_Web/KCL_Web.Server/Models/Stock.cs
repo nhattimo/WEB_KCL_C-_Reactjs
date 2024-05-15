@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace KCL_Web.Server.Models;
 
 public partial class Stock
 {
+    [Key]
     public int Id { get; set; }
 
     public string Synbol { get; set; } = null!;
