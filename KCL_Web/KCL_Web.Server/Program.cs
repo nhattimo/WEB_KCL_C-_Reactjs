@@ -1,4 +1,5 @@
 using KCL_Web.Server.Interfaces;
+using KCL_Web.Server.Mappers;
 using KCL_Web.Server.Models;
 using KCL_Web.Server.Repository;
 using Microsoft.EntityFrameworkCore;
@@ -46,7 +47,16 @@ builder.Services.AddScoped<INavListRepository, NavListRepository>();
 builder.Services.AddScoped<IRoleRepository, RoleRepository>();
 
 builder.Services.AddScoped<IBannerRepository, BannerRepository>();
+//ProductCategoryRepository
+builder.Services.AddScoped<IProductCategoryRepository, ProductCategoryRepository>();
+//ProuductRepository
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+//PostingCategoryRepository
+builder.Services.AddScoped<IPostingCategoryRepository, PostingCategoryRepository>();
+//PostRepository
+builder.Services.AddScoped<IPostRepostitory,PostRepository>();
 
+builder.Services.AddAutoMapper(typeof(AutoMapperProfiles));
 
 // Tạo ra một đối tượng ứng dụng (app) từ đối tượng builder đã được xây dựng trước đó.
 // Điều này là cần thiết để có thể tiếp tục cấu hình và chạy ứng dụng

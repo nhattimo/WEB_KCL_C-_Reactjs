@@ -1,10 +1,162 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\CODE\\KCL\\Web_KCL_Group\\",
+  "WorkspaceRootPath": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\kcl\\web_kcl_group\\kcl_web\\kcl_web.server\\repository\\stockrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\repository\\postrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\repository\\postrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\controllers\\postscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\controllers\\postscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\interfaces\\ipostrepostitory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\interfaces\\ipostrepostitory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\mappers\\automapperprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\mappers\\automapperprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\dtos\\post\\postdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\dtos\\post\\postdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\dtos\\post\\updatedpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\dtos\\post\\updatedpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\dtos\\post\\addingpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\dtos\\post\\addingpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\dtos\\postcategory\\postingcategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\dtos\\postcategory\\postingcategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\controllers\\postingcategoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\controllers\\postingcategoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\repository\\postingcategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\repository\\postingcategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\interfaces\\ipostingcategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\interfaces\\ipostingcategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\interfaces\\iproductcategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\interfaces\\iproductcategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\dtos\\postcategory\\updatedpostcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\dtos\\postcategory\\updatedpostcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\dtos\\postcategory\\addingpostcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\dtos\\postcategory\\addingpostcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\repository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\repository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\dtos\\product\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\dtos\\product\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\models\\productcatogory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\models\\productcatogory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\dtos\\product\\updatedproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\dtos\\product\\updatedproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\dtos\\product\\addingproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\dtos\\product\\addingproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\mappers\\navigationmappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\mappers\\navigationmappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\dtos\\productcategory\\productcategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\dtos\\productcategory\\productcategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\dtos\\productcategory\\updatingproductcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\dtos\\productcategory\\updatingproductcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\dtos\\productcategory\\addingproductcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\dtos\\productcategory\\addingproductcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\repository\\navlistrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\repository\\navlistrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\repository\\commentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\repository\\commentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\mappers\\accountmappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\mappers\\accountmappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\interfaces\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\interfaces\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\repository\\accountrepository .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\repository\\accountrepository .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\interfaces\\inavigationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\interfaces\\inavigationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\dtos\\account\\resetpasswordrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\dtos\\account\\resetpasswordrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\repository\\stockrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\repository\\stockrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|e:\\code\\web_ban_hang_kcl\\web_kcl_cshap_reactjs\\kcl_web\\kcl_web.server\\interfaces\\istockrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A52C9667-B92F-4B4D-A03C-4750868F43F7}|KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj|solutionrelative:kcl_web\\kcl_web.server\\interfaces\\istockrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,28 +166,534 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{ca8cc5c7-0231-406a-95cd-aa5ed6ac0190}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\appsettings.Development.json",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\appsettings.Development.json",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-15T07:32:54.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PostsController.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Controllers\\PostsController.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Controllers\\PostsController.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Controllers\\PostsController.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Controllers\\PostsController.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAswEIAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T21:52:29.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PostRepository.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Repository\\PostRepository.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Repository\\PostRepository.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Repository\\PostRepository.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Repository\\PostRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD8AAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T21:38:29.748Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IPostRepostitory.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Interfaces\\IPostRepostitory.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Interfaces\\IPostRepostitory.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Interfaces\\IPostRepostitory.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Interfaces\\IPostRepostitory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T21:35:06.881Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PostDto.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Dtos\\Post\\PostDto.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Dtos\\Post\\PostDto.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Dtos\\Post\\PostDto.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Dtos\\Post\\PostDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T21:32:58.965Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UpdatedPost.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Dtos\\Post\\UpdatedPost.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Dtos\\Post\\UpdatedPost.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Dtos\\Post\\UpdatedPost.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Dtos\\Post\\UpdatedPost.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAzwBIAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T21:32:40.668Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AddingPost.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Dtos\\Post\\AddingPost.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Dtos\\Post\\AddingPost.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Dtos\\Post\\AddingPost.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Dtos\\Post\\AddingPost.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAxwBIAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T21:30:00.92Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Interfaces\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Interfaces\\IProductRepository.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Interfaces\\IProductRepository.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Interfaces\\IProductRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T20:01:50.595Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Program.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Program.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Program.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Program.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAAADgAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T06:32:58.951Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PostingCategoriesController.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Controllers\\PostingCategoriesController.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Controllers\\PostingCategoriesController.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Controllers\\PostingCategoriesController.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Controllers\\PostingCategoriesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEQAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T21:16:04.806Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PostingCategoryRepository.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Repository\\PostingCategoryRepository.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Repository\\PostingCategoryRepository.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Repository\\PostingCategoryRepository.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Repository\\PostingCategoryRepository.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAkwDwAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T21:03:27.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AutoMapperProfiles.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Mappers\\AutoMapperProfiles.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Mappers\\AutoMapperProfiles.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Mappers\\AutoMapperProfiles.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Mappers\\AutoMapperProfiles.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwCAAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T07:06:13.812Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IPostingCategoryRepository.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Interfaces\\IPostingCategoryRepository.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Interfaces\\IPostingCategoryRepository.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Interfaces\\IPostingCategoryRepository.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Interfaces\\IPostingCategoryRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T20:58:45.918Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PostingCategoryDto.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Dtos\\PostCategory\\PostingCategoryDto.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Dtos\\PostCategory\\PostingCategoryDto.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Dtos\\PostCategory\\PostingCategoryDto.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Dtos\\PostCategory\\PostingCategoryDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T20:55:43.036Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UpdatedPostCategory.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Dtos\\PostCategory\\UpdatedPostCategory.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Dtos\\PostCategory\\UpdatedPostCategory.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Dtos\\PostCategory\\UpdatedPostCategory.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Dtos\\PostCategory\\UpdatedPostCategory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T20:55:07.204Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AddingPostCategory.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Dtos\\PostCategory\\AddingPostCategory.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Dtos\\PostCategory\\AddingPostCategory.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Dtos\\PostCategory\\AddingPostCategory.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Dtos\\PostCategory\\AddingPostCategory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T20:54:01.304Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IProductCategoryRepository.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Interfaces\\IProductCategoryRepository.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Interfaces\\IProductCategoryRepository.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Interfaces\\IProductCategoryRepository.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Interfaces\\IProductCategoryRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAsAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T07:08:57.749Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Controllers\\ProductsController.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Controllers\\ProductsController.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAEEAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T20:18:34.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Repository\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Repository\\ProductRepository.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Repository\\ProductRepository.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Repository\\ProductRepository.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAA7wEIAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T20:04:07.077Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ProductDto.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Dtos\\Product\\ProductDto.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Dtos\\Product\\ProductDto.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Dtos\\Product\\ProductDto.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Dtos\\Product\\ProductDto.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABQAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T10:08:40.32Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "UpdatedProduct.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Dtos\\Product\\UpdatedProduct.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Dtos\\Product\\UpdatedProduct.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Dtos\\Product\\UpdatedProduct.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Dtos\\Product\\UpdatedProduct.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAA8wBIAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T10:08:15.061Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "AddingProduct.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Dtos\\Product\\AddingProduct.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Dtos\\Product\\AddingProduct.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Dtos\\Product\\AddingProduct.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Dtos\\Product\\AddingProduct.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAA6wBIAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T10:06:44.993Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\appsettings.json",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\appsettings.json",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\appsettings.json",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-10T09:50:47.06Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ProductCatogory.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Models\\ProductCatogory.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Models\\ProductCatogory.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Models\\ProductCatogory.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Models\\ProductCatogory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAUAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T07:11:01.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "NavigationMappers.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Mappers\\NavigationMappers.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Mappers\\NavigationMappers.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Mappers\\NavigationMappers.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Mappers\\NavigationMappers.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T08:40:14.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ProductCategoryDto.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Dtos\\ProductCategory\\ProductCategoryDto.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Dtos\\ProductCategory\\ProductCategoryDto.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Dtos\\ProductCategory\\ProductCategoryDto.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Dtos\\ProductCategory\\ProductCategoryDto.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAA1wA4AAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T07:19:18.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "UpdatingProductCategory.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Dtos\\ProductCategory\\UpdatingProductCategory.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Dtos\\ProductCategory\\UpdatingProductCategory.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Dtos\\ProductCategory\\UpdatingProductCategory.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Dtos\\ProductCategory\\UpdatingProductCategory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T07:18:35.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "AddingProductCategory.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Dtos\\ProductCategory\\AddingProductCategory.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Dtos\\ProductCategory\\AddingProductCategory.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Dtos\\ProductCategory\\AddingProductCategory.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Dtos\\ProductCategory\\AddingProductCategory.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAxwAwAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T07:14:56.448Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Controllers\\AccountController.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T08:32:50.374Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "CommentRepository.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Repository\\CommentRepository.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Repository\\CommentRepository.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Repository\\CommentRepository.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Repository\\CommentRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T07:25:54.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "NavListRepository.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Repository\\NavListRepository.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Repository\\NavListRepository.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Repository\\NavListRepository.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Repository\\NavListRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T07:27:52.278Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "AccountMappers.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Mappers\\AccountMappers.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Mappers\\AccountMappers.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Mappers\\AccountMappers.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Mappers\\AccountMappers.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T07:19:53.033Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "IAccountRepository.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Interfaces\\IAccountRepository.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Interfaces\\IAccountRepository.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Interfaces\\IAccountRepository.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Interfaces\\IAccountRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T07:09:01.687Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "AccountRepository .cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Repository\\AccountRepository .cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Repository\\AccountRepository .cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Repository\\AccountRepository .cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Repository\\AccountRepository .cs",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAwwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T06:32:17.197Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "INavigationRepository.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Interfaces\\INavigationRepository.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Interfaces\\INavigationRepository.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Interfaces\\INavigationRepository.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Interfaces\\INavigationRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T06:32:01.144Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ResetPasswordRequestDto.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Dtos\\Account\\ResetPasswordRequestDto.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Dtos\\Account\\ResetPasswordRequestDto.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Dtos\\Account\\ResetPasswordRequestDto.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Dtos\\Account\\ResetPasswordRequestDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T06:26:39.019Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "IStockRepository.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Interfaces\\IStockRepository.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Interfaces\\IStockRepository.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Interfaces\\IStockRepository.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Interfaces\\IStockRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T06:23:27.273Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "StockRepository.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Repository\\StockRepository.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Repository\\StockRepository.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Repository\\StockRepository.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Repository\\StockRepository.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAkwAcAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T09:32:41.351Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "510f32a5-321b-4312-8ca2-c7c97d50eb07",
+        "Display": 0,
+        "X": 108,
+        "Y": 782,
+        "Width": 1134,
+        "Height": 444,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "StockRepository.cs",
-              "DocumentMoniker": "E:\\CODE\\KCL\\Web_KCL_Group\\KCL_Web\\KCL_Web.Server\\Repository\\StockRepository.cs",
-              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Repository\\StockRepository.cs",
-              "ToolTip": "E:\\CODE\\KCL\\Web_KCL_Group\\KCL_Web\\KCL_Web.Server\\Repository\\StockRepository.cs",
-              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Repository\\StockRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "Product.cs",
+              "DocumentMoniker": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "KCL_Web\\KCL_Web.Server\\Models\\Product.cs",
+              "ToolTip": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\Models\\Product.cs",
+              "RelativeToolTip": "KCL_Web\\KCL_Web.Server\\Models\\Product.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwAsAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T09:32:41.351Z",
+              "WhenOpened": "2024-05-10T10:07:10.495Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             }
           ]
         }

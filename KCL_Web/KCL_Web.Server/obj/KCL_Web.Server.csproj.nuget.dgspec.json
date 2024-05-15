@@ -1,26 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "E:\\CODE\\KCL\\Web_KCL_Group\\KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj": {}
+    "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj": {}
   },
   "projects": {
-    "E:\\CODE\\KCL\\Web_KCL_Group\\KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj": {
+    "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\CODE\\KCL\\Web_KCL_Group\\KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj",
+        "projectUniqueName": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj",
         "projectName": "KCL_Web.Server",
-        "projectPath": "E:\\CODE\\KCL\\Web_KCL_Group\\KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj",
-        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
-        "outputPath": "E:\\CODE\\KCL\\Web_KCL_Group\\KCL_Web\\KCL_Web.Server\\obj\\",
+        "projectPath": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj",
+        "packagesPath": "C:\\Users\\KINHTHANH\\.nuget\\packages\\",
+        "outputPath": "E:\\CODE\\Web_Ban_Hang_KCL\\WEB_KCL_Cshap_Reactjs\\KCL_Web\\KCL_Web.Server\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\KINHTHANH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\DevExpress 19.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,6 +51,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
               "version": "[8.0.4, )"
@@ -54,17 +65,17 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[8.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[8.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[8.0.4, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -72,7 +83,7 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.4.0, )"
+              "version": "[6.5.0, )"
             }
           },
           "imports": [
@@ -94,7 +105,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
