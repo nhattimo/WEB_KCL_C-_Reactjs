@@ -287,3 +287,4 @@ E:\CODE\Web_Ban_Hang_KCL\WEB_KCL_Cshap_Reactjs\KCL_Web\KCL_Web.Server\obj\Debug\
 E:\CODE\Web_Ban_Hang_KCL\WEB_KCL_Cshap_Reactjs\KCL_Web\KCL_Web.Server\obj\Debug\net8.0\KCL_Web.Server.pdb
 E:\CODE\Web_Ban_Hang_KCL\WEB_KCL_Cshap_Reactjs\KCL_Web\KCL_Web.Server\obj\Debug\net8.0\KCL_Web.Server.genruntimeconfig.cache
 E:\CODE\Web_Ban_Hang_KCL\WEB_KCL_Cshap_Reactjs\KCL_Web\KCL_Web.Server\obj\Debug\net8.0\ref\KCL_Web.Server.dll
+E:\CODE\KCL\Web_KCL_Group\KCL_Web\KCL_Web.Server\bin\Debug\net8.0\AutoMapper.dll

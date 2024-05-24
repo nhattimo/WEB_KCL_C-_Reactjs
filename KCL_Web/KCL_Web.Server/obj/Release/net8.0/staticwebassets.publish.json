@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "cC3+axR1zwRzK+82tCS+62SOv3jDsvWhOECvFU3bdaI=",
+  "Source": "KCL_Web.Server",
+  "BasePath": "_content/KCL_Web.Server",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
