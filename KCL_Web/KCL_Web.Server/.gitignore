@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Web_KCL_Group.sln
+.vs
+# Azure DevOps
+.vs/
+bin/
+obj/
