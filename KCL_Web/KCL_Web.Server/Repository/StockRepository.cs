@@ -15,7 +15,7 @@ namespace KCL_Web.Server.Repository
 
         Lớp StockRepository này là một phần của mô hình Repository Pattern 
         trong ứng dụng của bạn. Mục đích của lớp này là tương tác với cơ sở dữ liệu 
-        để thực hiện các thao tác CRUD (Create, Read, Update, Delete) trên đối tượng Stock.
+        để thực hiện các thao tác CRUD (Create, Read, Update, Delete) trên đối tượng Stock.11`  `   1   12
         */
         private readonly KclinicKclWebsiteContext _context;
         public StockRepository(KclinicKclWebsiteContext context)

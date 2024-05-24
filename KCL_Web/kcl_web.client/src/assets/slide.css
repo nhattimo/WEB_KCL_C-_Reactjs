@@ -1,0 +1,85 @@
+
+
+.carousel-control-next{
+   padding-left: 50px;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon{
+    filter: invert(1) grayscale(100);
+}   
+ 
+ .carousel .carousel-inner .carousel-caption
+{
+    color: black;
+}
+
+.carousel .carousel-indicators{
+   
+   margin-bottom: 0px;
+}
+.carousel .carousel-indicators button{
+    width: 45px;
+    height: 4px;
+    border-radius: 10px;
+    background-color: rgba(15, 189, 20, 0.457) ;
+    margin: 5px;
+}
+
+.carousel .carousel-indicators button.active{
+    background-color: rgb(3, 114, 7);
+}
+
+
+
+@media (min-width: 1200px) {
+
+    .carousel .carousel-inner{
+        position: absolute;
+
+    }
+
+    .carousel{
+        background-color: rgb(255, 255, 255);
+        height: 35rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .carousel .carousel-inner{
+        position: absolute;
+        left: 5%;
+        width: 90%;
+        height: 90%; 
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 15px;
+    }
+
+
+
+    .carousel-control-next{
+        margin-right: 6rem;
+        justify-content: right;
+        border-radius: 20px;
+        height: 90%;
+    }
+    .carousel-control-prev{
+        margin-left: 6rem;
+        justify-content: left;
+        border-radius: 20px;
+        height: 90%;
+    }
+
+
+    .carousel-control-next:hover{
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,255,255,0) 0%, rgba(0,62,42,1) 100%);
+        
+    }
+    .carousel-control-prev:hover{
+        background: rgb(0,62,42);
+        background: linear-gradient(90deg, rgba(0,62,42,1) 0%, rgba(255,255,255,0) 100%);
+
+    }
+    
+}   

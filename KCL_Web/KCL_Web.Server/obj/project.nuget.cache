@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mt67S/MNesa7+lFnPquohIcMeZ6izo3eyQ2jVR+JPFRrH1qO5vd5E79Aw+DmSjYZYplwms7eL5QWPM+lZl5wRg==",
+  "dgSpecHash": "z5y4ac7FLPsgu5SWvo3cnlbGOjp85sFVDzH9ZbxK1U3DaLIPKb8W77x0wjLRICqXtheE+6mKuQbTnswTcUnelA==",
   "success": true,
-  "projectFilePath": "E:\\CODE\\KCL\\Web_KCL_Group\\KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj",
+  "projectFilePath": "E:\\Cuoi cung\\KCL_Web\\KCL_Web.Server\\KCL_Web.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nguye\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\nguye\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
