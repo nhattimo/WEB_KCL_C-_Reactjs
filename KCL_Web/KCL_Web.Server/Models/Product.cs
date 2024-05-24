@@ -1,10 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace KCL_Web.Server.Models;
 
 public partial class Product
 {
+    [Key]
     public int Id { get; set; }
 
     public string? Name { get; set; }
@@ -15,15 +16,13 @@ public partial class Product
 
     public byte? Status { get; set; }
 
-    public int? CatogoryId { get; set; }
+    // Khóa ngoại cho mối quan hệ một-nhiều với ProductCategory
+    public int? CategoryId { get; set; }
+    [ForeignKey("CategoryId")]
+    public virtual ProductCategory? Category { get; set; }
 
-    public string? UrlImage { get; set; }
-
-    public string? Description { get; set; }
-
-    public int? AccountId { get; set; }
-
-    public virtual Account? Account { get; set; }
-
-    public virtual ProductCatogory? Catogory { get; set; }
+    // Khóa ngoại cho mối quan hệ một-nhiều với AppUser
+    public string? AppUserId { get; set; }
+    [ForeignKey("AppUserId")]
+    public virtual AppUser? AppUser { get; set; }
 }

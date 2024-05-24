@@ -2,7 +2,11 @@ using KCL_Web.Server.Interfaces;
 using KCL_Web.Server.Mappers;
 using KCL_Web.Server.Models;
 using KCL_Web.Server.Repository;
+using KCL_Web.Server.Service;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,6 +35,38 @@ builder.Services.AddDbContext<KclinicKclWebsiteContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DBWebKCLGroup"));
 });
 
+builder.Services.AddIdentity<AppUser, IdentityRole>(options =>
+{
+    options.Password.RequireDigit = true;
+    options.Password.RequireLowercase = true;
+    options.Password.RequireUppercase = true;
+    options.Password.RequireNonAlphanumeric = true;
+    options.Password.RequiredLength = 12;
+})
+.AddEntityFrameworkStores<KclinicKclWebsiteContext>();
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme =
+    options.DefaultChallengeScheme =
+    options.DefaultForbidScheme =
+    options.DefaultScheme =
+    options.DefaultSignInScheme =
+    options.DefaultSignOutScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidIssuer = builder.Configuration["JWT:Issuer"],
+        ValidateAudience = true,
+        ValidAudience = builder.Configuration["JWT:Audience"],
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(
+            System.Text.Encoding.UTF8.GetBytes(builder.Configuration["JWT:SigningKey"])
+        )
+    };
+});
 
 // 3.Đăng ký repository:
 // Đây là cách đăng ký một repository (StockRepository) 
@@ -56,7 +92,16 @@ builder.Services.AddScoped<IPostingCategoryRepository, PostingCategoryRepository
 //PostRepository
 builder.Services.AddScoped<IPostRepostitory,PostRepository>();
 
+<<<<<<< HEAD
 builder.Services.AddAutoMapper(typeof(AutoMapperProfiles));
+=======
+builder.Services.AddScoped<ITokenService, TokenService>();
+
+
+
+
+
+>>>>>>> f46d07f54ceb1c456508f04e66ea05c82405d432
 
 // Tạo ra một đối tượng ứng dụng (app) từ đối tượng builder đã được xây dựng trước đó.
 // Điều này là cần thiết để có thể tiếp tục cấu hình và chạy ứng dụng
@@ -81,6 +126,10 @@ if (app.Environment.IsDevelopment())
 
 // UseHttpsRedirection() chuyển hướng các yêu cầu HTTP sang HTTPS.
 app.UseHttpsRedirection();
+
+//
+app.UseAuthentication();
+app.UseAuthorization();
 
 // UseAuthorization() được sử dụng để kích hoạt middleware xác thực và phân quyền.
 app.UseAuthorization();

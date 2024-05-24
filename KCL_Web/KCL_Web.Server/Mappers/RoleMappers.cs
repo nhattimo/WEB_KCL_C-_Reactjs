@@ -12,7 +12,7 @@ namespace KCL_Web.Server.Mappers
                 RoleId = roleModel.RoleId,
                 RoleName = roleModel.RoleName,
                 RoleDescription = roleModel.RoleDescription,
-                Accounts = roleModel.Accounts.Select(r => r.ToAccountDto()).ToList()
+                //Accounts = roleModel.Accounts.Select(r => r.ToAccountDto()).ToList()
             };
         }
 

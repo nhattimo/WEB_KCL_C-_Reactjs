@@ -13,7 +13,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KCL_Web.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9fd31d9fddc45a69ac0adbfdb8dcb72baf74aef4")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+da6ce050c60d6981ba9a4bf62b871e1d1449320e")]
+>>>>>>> f46d07f54ceb1c456508f04e66ea05c82405d432
 [assembly: System.Reflection.AssemblyProductAttribute("KCL_Web.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KCL_Web.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -10,6 +10,6 @@ namespace KCL_Web.Server.Dtos.Role
 
         public string? RoleDescription { get; set; }
 
-        public List<AccountDto> Accounts { get; set; }
+        //public List<AccountDto> Accounts { get; set; }
     }
 }

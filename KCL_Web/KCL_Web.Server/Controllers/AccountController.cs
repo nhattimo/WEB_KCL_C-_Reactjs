@@ -1,115 +1,94 @@
 using KCL_Web.Server.Dtos.Account;
 using KCL_Web.Server.Interfaces;
-using KCL_Web.Server.Mappers;
+using KCL_Web.Server.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace KCL_Web.Server.Controllers
 {
-    [ApiController]
     [Route("api/account")]
+    [ApiController]
     public class AccountController : ControllerBase
     {
-        private readonly IAccountRepository _accountRepo;
-        private readonly IRoleRepository _roleRepo;
-
-        public AccountController(IAccountRepository accountRepo, IRoleRepository roleRepo)
+        private readonly UserManager<AppUser> _userManager;
+        private readonly ITokenService _tokenService;
+        private readonly SignInManager<AppUser> _signinManager;
+        public AccountController(UserManager<AppUser> userManager, ITokenService tokenService, SignInManager<AppUser> signInManager)
         {
-            _accountRepo = accountRepo;
-            _roleRepo = roleRepo;
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> GetAll()
-        {
-            var accounts = await _accountRepo.GetAllAsync();
-            var accountDtos = accounts.Select(a => a.ToAccountDto());
-            return Ok(accountDtos);
-        }
-
-        [HttpGet("{email}")]
-        public async Task<IActionResult> GetByEmail(string email)
-        {
-            var account = await _accountRepo.GetByEmailAsync(email);
-            if (account == null)
-            {
-                return NotFound();
-            }
-            var accountDto = account.ToAccountDto();
-            return Ok(accountDto);
-        }
-
-        [HttpPost("{roleId:int}")]
-        public async Task<IActionResult> Register([FromRoute] int roleId, RegisterRequestDto registerDto)
-        {
-            if (!await _roleRepo.RoleExists(roleId))
-            {
-                return BadRequest("Role does not exist");
-            }
-
-            // Check if email is unique
-            if (!await _accountRepo.IsEmailUniqueAsync(registerDto.Email))
-            {
-                return Conflict("Email already exists");
-            }
-
-            if (!await _accountRepo.IsValidEmail(registerDto.Email))
-            {
-                return Conflict("This email is already registered");
-            }
-
-            var accountModel = registerDto.ToAccountFromRegisterDto(roleId);
-
-            await _accountRepo.CreateAsync(accountModel);
-            return CreatedAtAction(nameof(GetByEmail), new { email = accountModel.Email }, accountModel.ToAccountDto());
+            _userManager = userManager;
+            _tokenService = tokenService;
+            _signinManager = signInManager;
         }
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login(LoginRequestDto loginDto)
+        public async Task<IActionResult> Login(LoginDto loginDto)
         {
             if (!ModelState.IsValid)
-            {
                 return BadRequest(ModelState);
-            }
 
-            var isValidCredentials = await _accountRepo.ValidateCredentialsAsync(loginDto.Email, loginDto.Password);
-            if (!isValidCredentials)
-            {
-                return Unauthorized("Invalid email or password");
-            }
+            var user = await _userManager.Users.FirstOrDefaultAsync(x => x.UserName == loginDto.Username.ToLower());
 
-            // You may implement JWT token generation logic here for authentication
-            // For demonstration purpose, let's return a simple message
-            return Ok("Login successful");
+            if (user == null) return Unauthorized("Invalid username!");
+
+            var result = await _signinManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
+
+            if (!result.Succeeded) return Unauthorized("Username not found and/or password incorrect");
+
+            return Ok(
+                new NewUserDto
+                {
+                    UserName = user.UserName,
+                    Email = user.Email,
+                    Token = _tokenService.CreateToken(user)
+                }
+            );
         }
 
-        [HttpPut("{email}")]
-        public async Task<IActionResult> ResetPassword([FromRoute] string email, ResetPasswordRequestDto resetPasswordDto)
+        [HttpPost("register")]
+        public async Task<IActionResult> Register([FromBody] RegisterDto registerDto)
         {
-            if (!ModelState.IsValid)
+            try
             {
-                return BadRequest(ModelState);
-            }
+                if (!ModelState.IsValid)
+                    return BadRequest(ModelState);
 
-            var isResetSuccessful = await _accountRepo.ResetPasswordAsync(email, resetPasswordDto.Password);
-            if (!isResetSuccessful)
+                var appUser = new AppUser
+                {
+                    UserName = registerDto.Username,
+                    Email = registerDto.Email
+                };
+
+                var createdUser = await _userManager.CreateAsync(appUser, registerDto.Password);
+
+                if (createdUser.Succeeded)
+                {
+                    var roleResult = await _userManager.AddToRoleAsync(appUser, "User");
+                    if (roleResult.Succeeded)
+                    {
+                        return Ok(
+                            new NewUserDto
+                            {
+                                UserName = appUser.UserName,
+                                Email = appUser.Email,
+                                Token = _tokenService.CreateToken(appUser)
+                            }
+                        );
+                    }
+                    else
+                    {
+                        return StatusCode(500, roleResult.Errors);
+                    }
+                }
+                else
+                {
+                    return StatusCode(500, createdUser.Errors);
+                }
+            }
+            catch (Exception e)
             {
-                return NotFound("Email not found");
+                return StatusCode(500, e);
             }
-
-            return Ok("Password reset successfully");
         }
-
-        [HttpDelete("{email}")]
-        public async Task<IActionResult> DeleteByEmail([FromRoute] string email)
-        {
-            var deletedAccount = await _accountRepo.DeleteByEmailAsync(email);
-            if (deletedAccount == null)
-            {
-                return NotFound("Account not found");
-            }
-            return Ok("successfully");
-        }
-
-
     }
 }
