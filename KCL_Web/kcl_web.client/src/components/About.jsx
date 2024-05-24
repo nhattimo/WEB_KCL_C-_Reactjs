@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
+
 function About() {
   return (
 
@@ -42,7 +43,7 @@ function About() {
         <div className="col-lg-6 align-self-end text-center text-lg-end">
           <img
             className="img-fluid"
-            src="img/hero-img.png"
+            src="../../public/image/hero-img.png"
             alt=""
             style={{ maxHeight: 300 }}
           />
@@ -93,7 +94,7 @@ function About() {
       <div className="row g-5 align-items-center">
         <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
           <div className="about-img">
-            <img className="img-fluid" src="img/about-img.jpg" />
+            <img className="img-fluid" src="../../public/image/about-img.jpg" />
           </div>
         </div>
         <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
@@ -124,7 +125,7 @@ function About() {
       <div className="row g-5 align-items-center">
         <div className="col-lg-6 wow fadeIn order-lg-last" data-wow-delay="0.1s">
           <div className="about-img">
-            <img className="img-fluid" src="img/about-img.jpg" />
+            <img className="img-fluid" src="../../public/image/" />
           </div>
         </div>
         <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
@@ -158,7 +159,7 @@ function About() {
       <div className="row g-5 align-items-center">
         <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
           <div className="about-img">
-            <img className="img-fluid" src="img/about-img.jpg" />
+            <img className="img-fluid" src="../../public/image/about-img.jpg" />
           </div>
         </div>
         <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
@@ -190,7 +191,7 @@ function About() {
       <div className="row g-5 align-items-center">
         <div className="col-lg-6 wow fadeIn order-lg-last" data-wow-delay="0.1s">
           <div className="about-img">
-            <img className="img-fluid" src="img/about-img.jpg" />
+            <img className="img-fluid" src="../../public/image/about-img.jpg" />
           </div>
         </div>
         <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">

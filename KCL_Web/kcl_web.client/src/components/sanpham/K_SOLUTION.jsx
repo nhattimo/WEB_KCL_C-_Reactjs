@@ -1,12 +1,16 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import "./Solution.css";
+import { Link } from "react-router-dom";
+
 
 function K_SOLUTION() {
   return (
+    <>
+    <div className="banner"></div>
     <div className="home">
       <div className="container">
         <Link to="/blog/this-is-a-post-title">
-          <div className="row align-items-center my-5">
+          <div className="row align-items-center ">
             <div className="col-lg-6">
               <img
                 className="img-fluid rounded mb-4 mb-lg-0"
@@ -49,7 +53,8 @@ function K_SOLUTION() {
           </div>
         </Link>
       </div>
-      </div>
+    </div>
+      </>
   );
 }
 

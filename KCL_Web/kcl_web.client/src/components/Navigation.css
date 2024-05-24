@@ -1,10 +1,7 @@
 /*** Navbar ***/
-.sticky-top {
-    top: -150px;    
-    transition: .5s;
-    color: green;
+.header .on-scroll{
+    position: fixed;
 }
-
 
 .navbar {
     padding: 11px 0 !important;

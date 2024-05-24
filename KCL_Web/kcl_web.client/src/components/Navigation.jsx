@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import { NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./Navigation.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-// import "./Navigation.js";
+// import "./Navigation.js"
+
+
+
 function Navigation() {
+    
+  
   return (
-    <div className="container-fluid  sticky-top">
+    <div className="container-fluid header">
     <div className="container">
         <nav className="navbar navbar-expand-lg navbar p-0">
             <a href="/" className="navbar-brand">
@@ -20,7 +25,7 @@ function Navigation() {
                 <div className="navbar-nav ms-auto">
                     <a href="/about" className="nav-item nav-link">Về KCL</a>
                     <div className="nav-item dropdown">
-                        <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Sản phẩm - Dịch vụ</a>
+                        <a href="/SanPham" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Sản phẩm - Dịch vụ</a>
                         <div className="dropdown-menu mt-2">
                             <a href="/SanPham/solution" className="dropdown-item">K.SOLUTION</a>
                             <a href="/SanPham/healthtech" className="dropdown-item">K.HEALTHTECH </a>

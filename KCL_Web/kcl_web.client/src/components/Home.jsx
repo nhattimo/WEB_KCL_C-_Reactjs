@@ -7,13 +7,15 @@ import {
   AboutItem,
   MutiTeam,
   MutiCase,
-  MutiProduct
+  MutiProduct,
+  TamNhin
 } from "../components";
 
 function Home() {
   return (
     <>
     <Slide />
+    <TamNhin  />
     <AboutItem />
     <MutiProduct />
     <MutiCase />

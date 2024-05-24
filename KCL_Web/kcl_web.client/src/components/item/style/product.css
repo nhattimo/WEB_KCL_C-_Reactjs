@@ -18,9 +18,9 @@
     transition: .5s;
 }
 
-.service-item:hover {
+/* .service-item:hover {
   
-}
+} */
 
 .service-item .service-icon {
     margin: 0 auto 20px auto;

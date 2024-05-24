@@ -11,7 +11,7 @@ function MutiProduct() {
         <div className="container-fluid service mt-5 py-5">
           <div className="container py-5">
             <div className="row g-5 align-items-center">
-              <div className="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+              <div className="col-lg-12 wow fadeIn" data-wow-delay="0.1s">
                 <div className="btn btn-sm border rounded-pill text-primary px-3 mb-3">
                   Our Services
                 </div>
@@ -24,7 +24,7 @@ function MutiProduct() {
                   Tìm Hiểu Thêm
                 </a>
               </div>
-              <div className="col-lg-7">
+              <div className="col-lg-12">
                 <div className="row g-4">
                   <div className="col-md-6">
                     <div className="row g-4">
