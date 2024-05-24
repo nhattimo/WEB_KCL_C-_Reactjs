@@ -19,9 +19,9 @@ namespace KCL_Web.Server.Mappers
             CreateMap<Walk, AddingWalkDto>().ReverseMap();
             CreateMap<Walk, UpdatingWalkDto>().ReverseMap();
             CreateMap<Walk, WalkDto>().ReverseMap();*/
-            CreateMap<ProductCatogory,ProductCategoryDto>().ReverseMap();
-            CreateMap<ProductCatogory, AddingProductCategory>().ReverseMap();
-            CreateMap<ProductCatogory,UpdatingProductCategory>().ReverseMap();
+            CreateMap<ProductCategory,ProductCategoryDto>().ReverseMap();
+            CreateMap<ProductCategory, AddingProductCategory>().ReverseMap();
+            CreateMap<ProductCategory, UpdatingProductCategory>().ReverseMap();
             CreateMap<Product, AddingProduct>().ReverseMap();
             CreateMap<Product, UpdatedProduct>().ReverseMap();
             CreateMap<Product,ProductDto>().ReverseMap();

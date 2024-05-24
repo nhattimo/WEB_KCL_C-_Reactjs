@@ -19,7 +19,7 @@ namespace KCL_Web.Server.Repository
 
         public async Task<Product> CreateProductAsync(AddingProduct addingProductDto)
         {
-            var product= _mapper.Map<Product>(addingProductDto);
+            var product = _mapper.Map<Product>(addingProductDto);
             await _context.Products.AddAsync(product);
             await _context.SaveChangesAsync();
             return product;
@@ -49,7 +49,7 @@ namespace KCL_Web.Server.Repository
 
         public async Task<Product?> UpdateProductAsync(int Id, UpdatedProduct updatedProductDto)
         {
-            var product= await _context.Products.FirstOrDefaultAsync(p => p.Id == Id);
+            var product = await _context.Products.FirstOrDefaultAsync(p => p.Id == Id);
             if (product == null)
             {
                 return null;
@@ -58,10 +58,10 @@ namespace KCL_Web.Server.Repository
             product.AddedTime = updatedProductDto.AddedTime;
             product.UpdatedTime = updatedProductDto.UpdatedTime;
             product.Status = updatedProductDto.Status;
-            product.CatogoryId = updatedProductDto.CatogoryId;
+            product.CategoryId = updatedProductDto.CatogoryId;
             product.UrlImage = updatedProductDto.UrlImage;
             product.Description = updatedProductDto.Description;
-            product.AccountId = updatedProductDto.AccountId;
+            product.AppUserId = updatedProductDto.AccountId;
             await _context.SaveChangesAsync();
 
             return product;

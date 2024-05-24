@@ -13,6 +13,12 @@ public partial class Product
     public DateTime? AddedTime { get; set; }
 
     public DateTime? UpdatedTime { get; set; }
+    public int? CatogoryId { get; set; }
+
+    public string? UrlImage { get; set; }
+
+    public string? Description { get; set; }
+
 
     public byte? Status { get; set; }
 

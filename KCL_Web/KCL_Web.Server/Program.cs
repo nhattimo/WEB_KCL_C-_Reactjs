@@ -90,18 +90,15 @@ builder.Services.AddScoped<IProductRepository, ProductRepository>();
 //PostingCategoryRepository
 builder.Services.AddScoped<IPostingCategoryRepository, PostingCategoryRepository>();
 //PostRepository
-builder.Services.AddScoped<IPostRepostitory,PostRepository>();
+builder.Services.AddScoped<IPostRepostitory, PostRepository>();
 
-<<<<<<< HEAD
 builder.Services.AddAutoMapper(typeof(AutoMapperProfiles));
-=======
 builder.Services.AddScoped<ITokenService, TokenService>();
 
 
 
 
 
->>>>>>> f46d07f54ceb1c456508f04e66ea05c82405d432
 
 // Tạo ra một đối tượng ứng dụng (app) từ đối tượng builder đã được xây dựng trước đó.
 // Điều này là cần thiết để có thể tiếp tục cấu hình và chạy ứng dụng
