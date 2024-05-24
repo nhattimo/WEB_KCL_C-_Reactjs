@@ -1,0 +1,19 @@
+.dropdown-menu {
+    animation: fadeInDown 0.5s ease forwards;
+    display: none; /* Không hiển thị ban đầu */
+}
+
+.dropdown-menu .show {
+    display: block; /* Hiển thị khi class 'show' được thêm vào */
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
