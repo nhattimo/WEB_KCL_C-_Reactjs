@@ -6,6 +6,7 @@ using KCL_Web.Server.Service;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -72,6 +73,7 @@ builder.Services.AddAuthentication(options =>
 // Đây là cách đăng ký một repository (StockRepository) 
 // với một interface (IStockRepository) trong container dịch vụ. 
 // Điều này giúp giảm bớt sự phụ thuộc giữa các lớp và tạo điều kiện cho việc sử dụng Dependency Injection.
+builder.Services.AddTransient<IFileService, FileService>();
 builder.Services.AddScoped<IAccountRepository, AccountRepository>();
 
 builder.Services.AddScoped<IStockRepository, StockRepository>();
@@ -99,14 +101,31 @@ builder.Services.AddScoped<ITokenService, TokenService>();
 
 
 
-
 // Tạo ra một đối tượng ứng dụng (app) từ đối tượng builder đã được xây dựng trước đó.
 // Điều này là cần thiết để có thể tiếp tục cấu hình và chạy ứng dụng
 var app = builder.Build();
+app.UseCors(builder =>
+{
+    builder.AllowAnyOrigin()
+           .AllowAnyMethod()
+           .AllowAnyHeader();
+});
+
+// Serve static files from the dist folder
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(builder.Environment.ContentRootPath, "wwwroot", "dist", "img")),
+    RequestPath = "/img"
+});
+
+
 
 // Middleware này được sử dụng để chuyển hướng yêu cầu đến các tệp mặc định trong thư mục gốc của ứng dụng (ví dụ: index.html, default.html, ...).
 // Nếu người dùng truy cập trang web mà không chỉ định tên tệp cụ thể trong URL, thì middleware này sẽ tự động chuyển hướng yêu cầu đến tệp mặc định được cấu hình.
 app.UseDefaultFiles();
+
+
 
 
 // Middleware này được sử dụng để phục vụ các tệp tĩnh như hình ảnh, CSS, JavaScript, vv.

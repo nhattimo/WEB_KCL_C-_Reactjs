@@ -25,7 +25,7 @@ function MutiCase() {
                     <h5 className="lh-base mb-3">
                      Các phần mềm chat gặp những biến động mạnh
                     </h5>
-                    <span className="btn btn-square btn-primary">
+                    <span className="btn btn-square btn-orange">
                       <i className="fa fa-arrow-right" />
                     </span>
                   </a>
@@ -40,7 +40,7 @@ function MutiCase() {
                     <h5 className="lh-base  mb-3">
                     Trí tuệ nhân tạo đang đạt được những bước tiến bộ vượt bậc
                     </h5>
-                    <span className="btn btn-square btn-primary">
+                    <span className="btn btn-square btn-orange">
                       <i className="fa fa-arrow-right" />
                     </span>
                   </a>
@@ -55,7 +55,7 @@ function MutiCase() {
                     <h5 className="lh-base  mb-3">
                       Lo ngại về sự phát triển thần tốc của trí tuệ nhân tạo, thay thế con người
                     </h5>
-                    <span className="btn btn-square btn-primary">
+                    <span className="btn btn-square btn-orange">
                       <i className="fa fa-arrow-right" />
                     </span>
                   </a>

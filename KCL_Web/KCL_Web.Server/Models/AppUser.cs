@@ -11,6 +11,7 @@ namespace KCL_Web.Server.Models
 
         public string? Name { get; set; }
 
+
         // Danh sách sản phẩm của người dùng
         public virtual ICollection<Product> Products { get; set; } = new List<Product>();
 

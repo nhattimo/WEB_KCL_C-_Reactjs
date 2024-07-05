@@ -4,7 +4,7 @@ function MutiTeam() {
     return(
 <>
   {/* Team Start */}
-  <div className="container-fluid bg-light py-5">
+  {/* <div className="container-fluid bg-light py-5"> */}
     {/* <div className="container py-5">
       <div className="row g-5 align-items-center">
         <div className="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
@@ -18,7 +18,7 @@ function MutiTeam() {
             et sit, sed stet no labore lorem sit. Sanctus clita duo justo et
             tempor eirmod magna dolore erat amet
           </p>
-          <a className="btn btn-primary rounded-pill px-4" href="">
+          <a className="btn btn-orange rounded-pill px-4" href="">
             Read More
           </a>
         </div>
@@ -36,16 +36,16 @@ function MutiTeam() {
                     <h5 className="mb-0">Boris Johnson</h5>
                     <small>Founder &amp; CEO</small>
                     <div className="d-flex justify-content-center mt-3">
-                      <a className="btn btn-square btn-primary m-1" href="">
+                      <a className="btn btn-square btn-orangem-1" href="">
                         <i className="fab fa-facebook-f" />
                       </a>
-                      <a className="btn btn-square btn-primary m-1" href="">
+                      <a className="btn btn-square btn-orangem-1" href="">
                         <i className="fab fa-twitter" />
                       </a>
-                      <a className="btn btn-square btn-primary m-1" href="">
+                      <a className="btn btn-square btn-orangem-1" href="">
                         <i className="fab fa-instagram" />
                       </a>
-                      <a className="btn btn-square btn-primary m-1" href="">
+                      <a className="btn btn-square btn-orangem-1" href="">
                         <i className="fab fa-linkedin-in" />
                       </a>
                     </div>
@@ -61,16 +61,16 @@ function MutiTeam() {
                     <h5 className="mb-0">Adam Crew</h5>
                     <small>Executive Manager</small>
                     <div className="d-flex justify-content-center mt-3">
-                      <a className="btn btn-square btn-primary m-1" href="">
+                      <a className="btn btn-square btn-orangem-1" href="">
                         <i className="fab fa-facebook-f" />
                       </a>
-                      <a className="btn btn-square btn-primary m-1" href="">
+                      <a className="btn btn-square btn-orangem-1" href="">
                         <i className="fab fa-twitter" />
                       </a>
-                      <a className="btn btn-square btn-primary m-1" href="">
+                      <a className="btn btn-square btn-orangem-1" href="">
                         <i className="fab fa-instagram" />
                       </a>
-                      <a className="btn btn-square btn-primary m-1" href="">
+                      <a className="btn btn-square btn-orangem-1" href="">
                         <i className="fab fa-linkedin-in" />
                       </a>
                     </div>
@@ -90,16 +90,16 @@ function MutiTeam() {
                     <h5 className="mb-0">Kate Winslet</h5>
                     <small>Co Founder</small>
                     <div className="d-flex justify-content-center mt-3">
-                      <a className="btn btn-square btn-primary m-1" href="">
+                      <a className="btn btn-square btn-orangem-1" href="">
                         <i className="fab fa-facebook-f" />
                       </a>
-                      <a className="btn btn-square btn-primary m-1" href="">
+                      <a className="btn btn-square btn-orangem-1" href="">
                         <i className="fab fa-twitter" />
                       </a>
-                      <a className="btn btn-square btn-primary m-1" href="">
+                      <a className="btn btn-square btn-orangem-1" href="">
                         <i className="fab fa-instagram" />
                       </a>
-                      <a className="btn btn-square btn-primary m-1" href="">
+                      <a className="btn btn-square btn-orangem-1" href="">
                         <i className="fab fa-linkedin-in" />
                       </a>
                     </div>
@@ -115,16 +115,16 @@ function MutiTeam() {
                     <h5 className="mb-0">Cody Gardner</h5>
                     <small>Project Manager</small>
                     <div className="d-flex justify-content-center mt-3">
-                      <a className="btn btn-square btn-primary m-1" href="">
+                      <a className="btn btn-square btn-orangem-1" href="">
                         <i className="fab fa-facebook-f" />
                       </a>
-                      <a className="btn btn-square btn-primary m-1" href="">
+                      <a className="btn btn-square btn-orangem-1" href="">
                         <i className="fab fa-twitter" />
                       </a>
-                      <a className="btn btn-square btn-primary m-1" href="">
+                      <a className="btn btn-square btn-orangem-1" href="">
                         <i className="fab fa-instagram" />
                       </a>
-                      <a className="btn btn-square btn-primary m-1" href="">
+                      <a className="btn btn-square btn-orangem-1" href="">
                         <i className="fab fa-linkedin-in" />
                       </a>
                     </div>
@@ -136,8 +136,8 @@ function MutiTeam() {
         </div>
       </div>
     </div> */}
-  </div>
-  {/* Team End */}
+  {/* </div>  {/* Team End */}
+ 
 </>
     );
 }

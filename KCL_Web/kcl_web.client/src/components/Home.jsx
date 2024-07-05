@@ -1,14 +1,13 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import "@fortawesome/fontawesome-free/css/all.min.css";
+import "./Home.css";
 import {
   Slide,
   AboutItem,
   MutiTeam,
-  MutiCase,
+  TopNews,
   MutiProduct,
-  TamNhin
+  TamNhin,
+  IntroAbout  
 } from "../components";
 
 function Home() {
@@ -16,9 +15,10 @@ function Home() {
     <>
     <Slide />
     <TamNhin  />
+    <IntroAbout  /> 
+    <TopNews />
     <AboutItem />
     <MutiProduct />
-    <MutiCase />
     <MutiTeam />
     </>
   );

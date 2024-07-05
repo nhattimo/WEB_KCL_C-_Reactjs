@@ -1,9 +1,16 @@
-using KCL_Web.Server.Dtos.Account;
+﻿using KCL_Web.Server.Dtos.Account;
 using KCL_Web.Server.Interfaces;
 using KCL_Web.Server.Models;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using NuGet.Protocol;
+using System.Configuration;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 
 namespace KCL_Web.Server.Controllers
 {
@@ -14,81 +21,125 @@ namespace KCL_Web.Server.Controllers
         private readonly UserManager<AppUser> _userManager;
         private readonly ITokenService _tokenService;
         private readonly SignInManager<AppUser> _signinManager;
-        public AccountController(UserManager<AppUser> userManager, ITokenService tokenService, SignInManager<AppUser> signInManager)
+        private readonly IConfiguration _configuration;
+        private readonly IAccountRepository _Account;
+
+        public AccountController(UserManager<AppUser>  userManager,IAccountRepository account, ITokenService tokenService, IConfiguration configuration, SignInManager<AppUser> signInManager)
         {
             _userManager = userManager;
             _tokenService = tokenService;
             _signinManager = signInManager;
+            _Account = account;
+            _configuration = configuration;
         }
 
-        [HttpPost("login")]
-        public async Task<IActionResult> Login(LoginDto loginDto)
-        {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
 
-            var user = await _userManager.Users.FirstOrDefaultAsync(x => x.UserName == loginDto.Username.ToLower());
+        //[HttpPost("login")]
+        //public async Task<IActionResult> Login(LoginDto loginDto)
+        //{
+        //    if (!ModelState.IsValid)
+        //        return BadRequest(ModelState);
 
-            if (user == null) return Unauthorized("Invalid username!");
+        //    var user = await _userManager.Users.FirstOrDefaultAsync(x => x.UserName == loginDto.Username.ToLower());
 
-            var result = await _signinManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
+        //    if (user == null) return Unauthorized("Invalid username!");
 
-            if (!result.Succeeded) return Unauthorized("Username not found and/or password incorrect");
+        //    var result = await _signinManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
 
-            return Ok(
-                new NewUserDto
-                {
-                    UserName = user.UserName,
-                    Email = user.Email,
-                    Token = _tokenService.CreateToken(user)
-                }
-            );
-        }
+        //    if (!result.Succeeded) return Unauthorized("Username not found and/or password incorrect");
+
+        //    return Ok(
+        //        new NewUserDto
+        //        {
+        //            UserName = user.UserName,
+        //            Email = user.Email,
+        //            Token = _tokenService.CreateToken(user)
+        //        }
+        //    );
+        //}
+
+
 
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterDto registerDto)
         {
-            try
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var user = new AppUser { Name = registerDto.Username, Email = registerDto.Email };
+
+            var result = await _userManager.CreateAsync(user, registerDto.Password);
+
+            if (!result.Succeeded)
+                return BadRequest(result.Errors);
+
+            return Ok("User registered successfully.");
+        }
+
+
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            // Tìm người dùng bằng email
+            var user = await _signinManager.UserManager.FindByEmailAsync(loginDto.Email);
+
+            if (user == null)
             {
-                if (!ModelState.IsValid)
-                    return BadRequest(ModelState);
-
-                var appUser = new AppUser
-                {
-                    UserName = registerDto.Username,
-                    Email = registerDto.Email
-                };
-
-                var createdUser = await _userManager.CreateAsync(appUser, registerDto.Password);
-
-                if (createdUser.Succeeded)
-                {
-                    var roleResult = await _userManager.AddToRoleAsync(appUser, "User");
-                    if (roleResult.Succeeded)
-                    {
-                        return Ok(
-                            new NewUserDto
-                            {
-                                UserName = appUser.UserName,
-                                Email = appUser.Email,
-                                Token = _tokenService.CreateToken(appUser)
-                            }
-                        );
-                    }
-                    else
-                    {
-                        return StatusCode(500, roleResult.Errors);
-                    }
-                }
-                else
-                {
-                    return StatusCode(500, createdUser.Errors);
-                }
+                return BadRequest("Invalid login attempt.");
             }
-            catch (Exception e)
+
+            // Sử dụng tên người dùng để đăng nhập
+            var result = await _signinManager.PasswordSignInAsync(user.UserName, loginDto.Password, true, lockoutOnFailure: false);
+
+            if (result.Succeeded)
             {
-                return StatusCode(500, e);
+
+                var data = GenerateJwtToken(user);
+                return Ok(new { Data = data });
             }
+            else if (result.IsLockedOut)
+            {
+                return BadRequest("User account locked out.");
+            }
+            else
+            {
+                return BadRequest("Invalid login attempt.");
+            }
+        }
+
+        private ObjectResult GenerateJwtToken(AppUser user)
+        {
+            var tokenHandler = new JwtSecurityTokenHandler();
+            Console.WriteLine("jwt key", _configuration["Jwt:Key"]);
+            var key = Encoding.ASCII.GetBytes(_configuration["Jwt:Key"]);
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(new Claim[]
+                {
+            new Claim(ClaimTypes.Name, user.UserName),
+            new Claim(ClaimTypes.Email, user.Email),
+            new Claim(JwtRegisteredClaimNames.Iat,((DateTimeOffset)DateTime.UtcNow).ToUnixTimeSeconds().ToString()),
+                    // Thêm các thông tin khác từ user vào đây nếu cần thiết
+                }),
+                Expires = DateTime.UtcNow.AddHours(1), // Thời gian hết hạn của token
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+            };
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            var accessToken = tokenHandler.WriteToken(token);
+            var response = new
+            {
+                status = true,
+                user = new
+                {
+                    email = user.Email,
+                    //role = user.IsAdmin ? 1 : 0
+                },
+                access_token = accessToken
+            };
+            return Ok(response);
         }
     }
 }

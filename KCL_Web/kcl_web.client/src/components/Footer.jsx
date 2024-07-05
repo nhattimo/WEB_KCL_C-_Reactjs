@@ -1,16 +1,14 @@
 import React from "react";
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
-// import  './Footer.css';
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import "@fortawesome/fontawesome-free/css/all.min.css";
+ import  './Footer.css';
+
 
 function Footer() {
   return (
     <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
-      <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
+      <section className='d-flex justify-content-left justify-content-lg-left p-4 border-bottom'>
         <div className='me-5 d-none d-lg-block'>
-          <span>Get connected with us on social networks:</span>
+          <span>Liên hệ với chúng tôi:</span>
         </div>
 
         <div>
@@ -36,95 +34,45 @@ function Footer() {
       </section>
 
       <section className=''>
-        <MDBContainer className='text-center text-md-start mt-5'>
-          <MDBRow className='mt-3'>
-            <MDBCol md='3' lg='4' xl='3' className='mx-auto mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>
-                <MDBIcon color='secondary' icon='gem' className='me-3' />
-                Company name
-              </h6>
-              <p>
-              VĂN PHÒNG ĐẠI DIỆN TẠI ĐÀ NẴNG
-              160 Lê Đình Lý, Phường Vĩnh Trung, Quận Thanh Khê, TP.Đà Nẵng
+        <MDBContainer className='text-center text-md-start mt-5 mb-4'>
+          <MDBRow className='mt-6'>
 
-          Điện Thoại: 0932 070 463 - 0914 911 577
-
-              </p>
-            </MDBCol>
-
-            <MDBCol md='2' lg='2' xl='2' className='mx-auto mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>Products</h6>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Angular
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  React
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Vue
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Laravel
-                </a>
-              </p>
-            </MDBCol>
-
-            <MDBCol md='3' lg='2' xl='2' className='mx-auto mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>Useful links</h6>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Pricing
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Settings
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Orders
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Help
-                </a>
-              </p>
-            </MDBCol>
-
-            <MDBCol md='4' lg='3' xl='3' className='mx-auto mb-md-0 mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
+          <MDBCol md='4' lg='3' xl='3' className='mx-auto mb-md-0 mb-4'>
+              <h6 className='text-uppercase fw-bold mb-4'>LIÊN HỆ VỚI CHÚNG TÔI</h6>
               <p>
                 <MDBIcon color='secondary' icon='home' className='me-2' />
-                New York, NY 10012, US
+                160 Lê Đình Lý, Vĩnh Trung, Thanh Khê, Đà Nẵng, Việt Nam
               </p>
               <p>
                 <MDBIcon color='secondary' icon='envelope' className='me-3' />
-                info@example.com
+                kclgroup.@gmail.com
               </p>
               <p>
-                <MDBIcon color='secondary' icon='phone' className='me-3' /> + 01 234 567 88
+                <MDBIcon color='secondary' icon='phone' className='me-3' /> 0932 070 463 
               </p>
               <p>
-                <MDBIcon color='secondary' icon='print' className='me-3' /> + 01 234 567 89
+                <MDBIcon color='secondary' icon='print' className='me-3' /> 0914 911 577
               </p>
             </MDBCol>
+
+            <MDBCol className=' mb-12'>
+           <div className="mappar">
+             <iframe className="maprouter" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.2417671117073!2d108.20806877589212!3d16.05293913987231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142195a60ca3229%3A0x14d418bcb191412d!2sKCL%20Solutions!5e0!3m2!1svi!2s!4v1717903294963!5m2!1svi!2s"
+              allowFullScreen loading="lazy" 
+                       referrerPolicy="no-referrer-when-downgrade" />
+           </div>
+           
+            </MDBCol>
+
+       
           </MDBRow>
         </MDBContainer>
       </section>
 
       <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-        © 2021 Copyright:
-        <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
-          MDBootstrap.com
+      Copyright © :
+        <a className='text-reset fw-bold' href='https://kclgroup.com/'>
+         KCL Group
         </a>
       </div>
     </MDBFooter>

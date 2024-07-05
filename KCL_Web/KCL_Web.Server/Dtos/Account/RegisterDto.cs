@@ -7,6 +7,7 @@ namespace KCL_Web.Server.Dtos.Account
         [Required]
         public string? Username { get; set; }
         [Required]
+
         [EmailAddress]
         public string? Email { get; set; }
         [Required]

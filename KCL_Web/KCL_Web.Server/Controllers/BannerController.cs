@@ -26,7 +26,7 @@ namespace KCL_Web.Server.Controllers
         }
 
         [HttpGet("{id:int}")]
-        public async Task<IActionResult> GetById(int id)
+        public async Task<IActionResult> GetById( int id)
         {
             var bannerModel = await _bannerRepo.GetByIdAsync(id);
             if (bannerModel == null)

@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>E:\testweb</_PublishTargetUrl>
-    <History>True|2024-05-18T13:22:40.8924002Z;True|2024-05-18T20:20:32.3092544+07:00;</History>
+    <History>True|2024-05-24T14:50:09.3080696Z;True|2024-05-18T20:22:40.8924002+07:00;True|2024-05-18T20:20:32.3092544+07:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

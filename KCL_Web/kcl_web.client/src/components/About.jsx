@@ -1,13 +1,21 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import "@fortawesome/fontawesome-free/css/all.min.css";
-import AboutCard from "./mutiAbout/aboutCard";
+
+import CustomCard from "./mutiAbout/Customcard";
+import "./about.css";
+import Banner from "./child/banner";
+import Intro from "./child/intro";
+import IntroAbout from "./item/IntroAbout";
+// import { Props  } from  "../../data/conveter";
 
 function About() {
-  return (
+  var img ="https://fpt.com/-/media/project/fpt-corporation/fpt/common/fpt/our-business/technology/cong-nghe_home.jpg"
 
+
+
+
+  return (
 <>
+
   {/* Hero Start */}
   <div className="container-fluid pt-5 bg-primary hero-header">
     <div className="container pt-5">
@@ -89,34 +97,44 @@ function About() {
 
 
   {/* About Start */}
-  <div className="container py-5">
-    <div className="row">
-    <AboutCard title="About Us" subtitle="Lorem ipsum dolor sit amet elit. Phasellus imperdiet, nulla et dictum interdum." 
-    text="Tempor erat elit Scelerisque vitae pellentesque sit amet porttitor eget dolor. Justo nec ultrices dui sapien eget mi proin sed libero enim sed"
-    footer="Copyright &copy; Your Website 2021. All Rights Reserved."/>
- 
 
-
-  <AboutCard title="About Us" subtitle="Lorem ipsum dolor sit amet elit. Phasellus imperdiet, nulla et dictum interdum." 
-    text="Tempor erat elit Scelerisque vitae pellentesque sit amet porttitor eget dolor. Justo nec ultrices dui sapien eget mi proin sed libero enim sed"
-    footer="Copyright &copy; Your Website 2021. All Rights Reserved."/>
-
-
-<AboutCard title="About Us" subtitle="Lorem ipsum dolor sit amet elit. Phasellus imperdiet, nulla et dictum interdum." 
-    text="Tempor erat elit Scelerisque vitae pellentesque sit amet porttitor eget dolor. Justo nec ultrices dui sapien eget mi proin sed libero enim sed"
-    footer="Copyright &copy; Your Website 2021. All Rights Reserved."/>
-    
-<AboutCard title="About Us" subtitle="Lorem ipsum dolor sit amet elit. Phasellus imperdiet, nulla et dictum interdum." 
-    text="Tempor erat elit Scelerisque vitae pellentesque sit amet porttitor eget dolor. Justo nec ultrices dui sapien eget mi proin sed libero enim sed"
-    footer="Copyright &copy; Your Website 2021. All Rights Reserved."/>
+  <div className="container py-5 ">
+    <div className="row about">
+    <CustomCard
+          img={img}
+          title="About Us"
+          subtitle="Lorem ipsum dolor sit amet elit. Phasellus imperdiet, nulla et dictum interdum."
+          text="Tempor erat elit Scelerisque vitae pellentesque sit amet porttitor eget dolor. Justo nec ultrices dui sapien eget mi proin sed libero enim sed"
+          footer="Last updated 3 mins ago"
+        />
+        <CustomCard
+          img="#"
+          title="About Us"
+          subtitle="Lorem ipsum dolor sit amet elit. Phasellus imperdiet, nulla et dictum interdum."
+          text="Tempor erat elit Scelerisque vitae pellentesque sit amet porttitor eget dolor. Justo nec ultrices dui sapien eget mi proin sed libero enim sed"
+          footer="Last updated 3 mins ago"
+        />
+        <CustomCard
+          img="#"
+          title="About Us"
+          subtitle="Lorem ipsum dolor sit amet elit. Phasellus imperdiet, nulla et dictum interdum."
+          text="Tempor erat elit Scelerisque vitae pellentesque sit amet porttitor eget dolor. Justo nec ultrices dui sapien eget mi proin sed libero enim sed"
+          footer="Last updated 3 mins ago"
+        />
+        <CustomCard
+          img="#"
+          title="About Us"
+          subtitle="Lorem ipsum dolor sit amet elit. Phasellus imperdiet, nulla et dictum interdum."
+          text="Tempor erat elit Scelerisque vitae pellentesque sit amet porttitor eget dolor. Justo nec ultrices dui sapien eget mi proin sed libero enim sed"
+          footer="Last updated 3 mins ago"
+        />
+        <IntroAbout></IntroAbout>
 </div>
 </ div> 
   {/* About End */}
 </>
-
-
-  
   );
 }
 
 export default About;
+

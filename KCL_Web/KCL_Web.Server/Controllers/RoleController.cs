@@ -36,13 +36,12 @@ namespace KCL_Web.Server.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] CreateRoleRequestDto roleDto)
+        public async Task<IActionResult> Create([FromForm]  CreateRoleRequestDto roleDto)
         {
             var roleModel = roleDto.ToRoleFromCreateDto();
             await _roleRepo.CreateAsync(roleModel);
             return CreatedAtAction(nameof(GetById), new { id = roleModel.RoleId }, roleModel.ToRoleDto());
         }
-
         [HttpPut]
         [Route("{id:int}")]
         public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateRoleRequestDto updateDto)

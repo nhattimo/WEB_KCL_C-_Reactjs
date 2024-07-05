@@ -1,0 +1,12 @@
+@media (max-width: 1024px) {
+.slick-list .slick-track .custom2-card{
+height: auto;
+}
+
+}
+
+@media (min-width: 1024px) {
+    .slick-list .slick-track .custom2-card{
+    height: 500px;
+    }
+    }

@@ -8,6 +8,7 @@
 
         public string? Content { get; set; }
 
+        public IFormFile Image { get; set; }
         public string? ImageUrl { get; set; }
 
         public DateTime? PostDate { get; set; }

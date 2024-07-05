@@ -58,7 +58,7 @@ namespace KCL_Web.Server.Repository
             productCategory.Status = updatingProductCategoryDto.Status;
             productCategory.CreatedTime = updatingProductCategoryDto.CreatedTime;
             productCategory.UpdatedTime = updatingProductCategoryDto.UpdatedTime;
-            productCategory.AppUserId = updatingProductCategoryDto.AccountId;
+            //productCategory.AppUserId = updatingProductCategoryDto.AccountId;
             await _context.SaveChangesAsync();
             return productCategory;
         }

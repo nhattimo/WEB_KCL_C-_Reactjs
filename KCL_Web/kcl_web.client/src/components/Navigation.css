@@ -3,27 +3,64 @@
     position: fixed;
 }
 
-.navbar {
-    padding: 11px 0 !important;
-    height: 75px;
-    color: green;
+/* body{
+
+
+}
+ */
+
+:root{
+    --red-color: #f50000;
+    --red-color-hover: #e50000;
+    --green-color: #28db00;
+   
+}
+
+
+.header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    color: var(--red-color);
+    font-weight: 500 !important;
+}
+
+
+/* .navbar .navbar-nav{
+    flex-grow: 1;
+    margin-left: 10px;
+} */
+
+/* .navbar .navbar-brand{
+   position: relative;
+   left: -10%;
+} */
+.header .navbar .navbar-brand img{
+    max-height: 50px;
+    max-width: 100%;
 
 }
 
-.navbar .navbar-nav .nav-link {
+  .header .navbar .navbar-nav .nav-link {
+
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 17px;
+    line-height: 19px;
+    letter-spacing: 0;
     margin-right: 35px;
-    padding: 0;
-    color: green;
+    color: var(--red-color);
     outline: none;
 }
 
-.navbar .navbar-nav .nav-link:hover,
-.navbar .navbar-nav .nav-link.active {
-    color: green;
-    transform: translateY(0);   
+.header .navbar .navbar-nav .nav-link:hover,
+.header .navbar .navbar-nav .nav-link:active {
+border-bottom: 3px solid var(--red-color) ;
 }
 
-.navbar .dropdown-toggle::after {
+
+.header .navbar .dropdown-toggle::after {
     border: none;
     content: "\f107";
     font-family: "Font Awesome 5 Free";
@@ -33,20 +70,57 @@
     transition: all .5s ease;
 }
 
+.header.navbar .dropdown-menu::after{
+    transition: all .5s ease;
+    transform: translateY(0);
+}
+.header .navbar .dropdown-menu .dropdown-item {
+    color: var(--red-color);
+    font-weight: 500 !important;
+}
+
+.header.navbar .nav-item:hover .dropdown-menu .dropdown-item:hover{
+    text-decoration:underline;
+    background-color: rgba(213, 213, 213, 0.726);
+}
+
+
 @media (max-width: 991.98px) {
-    .navbar .navbar-nav {
+    .header .navbar .navbar-brand{
+        position: relative;
+        display: flex;
+        justify-content: center !important  ;
+        left: 46%;
+       
+        
+     }
+
+     .header .navbar .navbar-brand img{
+
+        width: 70%;
+     }
+     .header .navbar .navbar-nav {
         padding: 0 15px;
         background-color: white;
     }
 
-    .navbar .navbar-nav .nav-link  {
+    .header .navbar .navbar-nav .nav-link  {
         margin-right: 0;
         padding: 10px 0;
-        color: green;
-    
+        color: var(--red-color);
+
+    }
+    .header .navbar .navbar-nav .nav-link:hover{
+        /* content: ""; */
+        background: #fc7321;
+        /* height: 4px;
+        width: 100px;
+        position: absolute;
+        bottom: -1px;
+        left: calc((100% - 100px) / 2); */
     }
 
-    .navbar .dropdown-menu{
+    .header .navbar .dropdown-menu{
         width: 10px;
         border-radius: 0;
         border-color: #ccc;
@@ -56,23 +130,11 @@
         transform: translateY(0);
     }
 
-    .navbar .dropdown-menu::after{
-        transition: all .5s ease;
-        transform: translateY(0);
-    }
-     .navbar .dropdown-menu .dropdown-item {
-        color: green;
-    
-    }
-
-    .navbar .nav-item:hover .dropdown-menu .dropdown-item:hover{
-        text-decoration:underline;
-        background-color: rgba(213, 213, 213, 0.726);
-    }
 }
 
 @media (min-width: 992px) {
-    .navbar .nav-item .dropdown-menu {
+
+    .header .navbar .nav-item .dropdown-menu {
         display: block;
         border: none;
         margin-top: 0;
@@ -80,24 +142,37 @@
         opacity: 0;
         visibility: hidden;
         transition: .5s;
-        color: green;
+        color: var(--red-color);
         background-color: white;
     }
 
-    .navbar .nav-item:hover .dropdown-menu {
+    .header .navbar .nav-item:hover .dropdown-menu {
         top: 100%;
         visibility: visible;
         transition: .5s;
         opacity: 1;
-        color: green;
+        color:var( --green-color);
     }
-    .navbar .nav-item:hover .dropdown-menu .dropdown-item {
-        color: green;
+    .header.navbar .nav-item:hover .dropdown-menu .dropdown-item {
+        color: var(--red-color-hover );
+       
     }
 
-    .navbar .nav-item:hover .dropdown-menu .dropdown-item:hover{
+    .header.navbar .nav-item:hover .dropdown-menu .dropdown-item:hover{
         text-decoration:underline;
         background-color: rgba(213, 213, 213, 0.726);
     }
 
+
+    @media (min-width: 1666px){
+        .header .navbar .navbar-brand{
+            padding-right: 10%;
+                }
+                .header.navbar{
+            max-height: 76px;
+         }
+      
+    }
+
+   
 }

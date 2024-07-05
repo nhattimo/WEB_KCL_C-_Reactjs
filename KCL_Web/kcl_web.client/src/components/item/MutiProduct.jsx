@@ -8,19 +8,19 @@ function MutiProduct() {
     return (
         <>
         {/* Service Start */}
-        <div className="container-fluid service mt-5 py-5">
+        <div className="container-fluid bg-1 mt-5 py-5">
           <div className="container py-5">
             <div className="row g-5 align-items-center">
               <div className="col-lg-12 wow fadeIn" data-wow-delay="0.1s">
                 <div className="btn btn-sm border rounded-pill text-primary px-3 mb-3">
                   Our Services
                 </div>
-                <h1 className="mb-4">Sản Phẩm Của Chúng tôi</h1>
+                <h2 className="mb-4">Sản Phẩm Của Chúng tôi</h2>
                 <p className="mb-4">
                 Các sản phẩm, dịch vụ của KCL đều được xây dựng trên nền tảng kết hợp công nghệ hiện đại của thế giới cùng với khả năng sáng tạo của các kỹ sư Việt nam. Lợi ích K.Clinic mang đến khách hàng đang sử dụng phần mềm: Quy trình làm việc tối ưu, minh bạch, nhanh chóng. Dữ liệu khách hàng đồng bộ, tập trung trong một phần mềm. Theo dõi sát sao bệnh án của khách hàng để chữa trị tốt nhất. 
                 Phân công, giám sát hiệu quả công việc dễ dàng. Rút ngắn thời gian giải quyết công việc. Không còn tình trạng bỏ lỡ khách hàng
                 </p>
-                <a className="btn btn-primary rounded-pill px-4" href="">
+                <a className="btn btn-orange rounded-pill px-4" href="">
                   Tìm Hiểu Thêm
                 </a>
               </div>
