@@ -16,6 +16,9 @@ namespace KCL_Web.Server.Controllers
             _roleRepo = roleRepo;
         }
 
+        
+
+
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
@@ -44,7 +47,7 @@ namespace KCL_Web.Server.Controllers
         }
         [HttpPut]
         [Route("{id:int}")]
-        public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateRoleRequestDto updateDto)
+        public async Task<IActionResult> Update([FromForm] int id, [FromBody] UpdateRoleRequestDto updateDto)
         {
             if (id <= 0)
             {

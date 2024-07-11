@@ -54,7 +54,7 @@ namespace KCL_Web.Server.Repository
                 return null;
             }
             postingCategory.CategoryName = updatedPostCategoryDto.CategoryName;
-            postingCategory.CreatedTime = updatedPostCategoryDto.UpdatedTime;
+            postingCategory.UpdatedTime = updatedPostCategoryDto.UpdatedTime;
             postingCategory.Status = updatedPostCategoryDto.Status;
             //postingCategory.AppUserId = updatedPostCategoryDto.AccountId;
             await _context.SaveChangesAsync();

@@ -3,6 +3,7 @@ using KCL_Web.Server.Dtos.Product;
 using KCL_Web.Server.Dtos.ProductCategory;
 using KCL_Web.Server.Interfaces;
 using KCL_Web.Server.Repository;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -40,16 +41,18 @@ namespace KCL_Web.Server.Controllers
             var productDto = _mapper.Map<ProductDto>(product);
             return Ok(productDto);
         }
+        [Authorize]
         [HttpPost]
-        public async Task<IActionResult> PostProduct([FromBody] AddingProduct addingProductDto)
+        public async Task<IActionResult> PostProduct([FromForm] AddingProduct addingProductDto)
         {
             var product = await _productRepository.CreateProductAsync(addingProductDto);
             var productDto = _mapper.Map<ProductDto>(product);
             return CreatedAtAction("GetProductById", new { Id = productDto.Id }, productDto);
         }
+        [Authorize]
         [HttpPut]
         [Route("{Id:int}")]
-        public async Task<IActionResult> UpdateProductById([FromRoute] int Id, [FromBody] UpdatedProduct updatedProductDto)
+        public async Task<IActionResult> UpdateProductById([FromForm] int Id, [FromForm] UpdatedProduct updatedProductDto)
         {
             var product = await _productRepository.UpdateProductAsync(Id, updatedProductDto);
             if (product == null)
@@ -58,6 +61,7 @@ namespace KCL_Web.Server.Controllers
             }
             return Ok(_mapper.Map<ProductDto>(product));
         }
+        [Authorize]
         [HttpDelete]
         [Route("{Id:int}")]
         public async Task<IActionResult> DeleteProduct([FromRoute] int Id)

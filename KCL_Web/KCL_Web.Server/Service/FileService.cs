@@ -20,7 +20,7 @@
             var path = Path.Combine(contentPath, "wwwroot", "dist", "img");
             // path = "c://projects/ImageManipulation.Ap/uploads" ,not exactly, but something like that
 
-            if (!Directory.Exists(path))
+            if (!Directory.Exists(path))    
             {
                 Directory.CreateDirectory(path);
             }
@@ -33,7 +33,8 @@
             }
 
             // generate a unique filename
-            var fileName = $"{Guid.NewGuid().ToString()}{ext}";
+            var fileName = Guid.NewGuid().ToString() + "_" + imageFile.FileName;
+            //var fileName = $"{Guid.NewGuid().ToString()}{ext}";
             var fileNameWithPath = Path.Combine(path, fileName);
             using var stream = new FileStream(fileNameWithPath, FileMode.Create);
             await imageFile.CopyToAsync(stream);

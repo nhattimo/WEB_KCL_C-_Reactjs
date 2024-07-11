@@ -58,7 +58,25 @@ namespace KCL_Web.Server.Controllers
         //    );
         //}
 
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            var users = _userManager.Users.ToList();
 
+            var userList = users.Select(user => new
+            {
+                user.Id,
+                user.UserName,
+                user.Email
+                
+                // Các thông tin khác của người dùng cần thiết
+            }).ToList();
+
+            return Ok(userList);
+        }
+
+
+    
 
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterDto registerDto)
@@ -110,6 +128,29 @@ namespace KCL_Web.Server.Controllers
             }
         }
 
+        [HttpDelete]
+        [Route("Delete{userId}")]
+        public async Task<IActionResult> DeleteUser(string userId)
+        {
+            // Tìm người dùng bởi userId
+            var user = await _userManager.FindByIdAsync(userId);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            // Xóa người dùng
+            var result = await _userManager.DeleteAsync(user);
+
+            if (result.Succeeded)
+            {
+                return Ok("Delete successfully");
+            }
+
+            // Trả về lỗi nếu không xóa được người dùng
+            return BadRequest(result.Errors);
+        }
         private ObjectResult GenerateJwtToken(AppUser user)
         {
             var tokenHandler = new JwtSecurityTokenHandler();

@@ -7,7 +7,7 @@ namespace KCL_Web.Server.Interfaces
     {
         Task<List<Banner>> GetAllAsync();
         Task<Banner?> GetByIdAsync(int id);
-        Task<Banner> CreateAsync(Banner BannerModel);
+        Task<Banner> CreateAsync(CreateBannerRequestDto BannerDTO);
         Task<Banner?> UpdateAsync(int id, UpdateBannerRequestDto BannerDto);
         Task<Banner?> DeleteAsync(int id);
         Task<bool> BannerExists(int id);

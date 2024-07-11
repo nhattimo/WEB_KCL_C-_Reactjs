@@ -3,6 +3,8 @@ using KCL_Web.Server.Dtos.Post;
 using KCL_Web.Server.Interfaces;
 using KCL_Web.Server.Models;
 using KCL_Web.Server.Repository;
+using KCL_Web.Server.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -18,12 +20,15 @@ namespace KCL_Web.Server.Controllers
         private readonly IPostRepostitory _postRepository;
         private readonly IMapper _mapper;
         private readonly IWebHostEnvironment _environment;
+        private readonly IFileService _fileService;
 
-        public PostsController(IPostRepostitory postRepository, IMapper mapper, IWebHostEnvironment environment)
+
+        public PostsController(IFileService fileService, IPostRepostitory postRepository, IMapper mapper, IWebHostEnvironment environment)
         {
             _postRepository = postRepository;
             _mapper = mapper;
             _environment = environment;
+            _fileService = fileService;
         }
         [HttpGet]
         public async Task<IActionResult> GetAll()
@@ -31,9 +36,9 @@ namespace KCL_Web.Server.Controllers
             var posts = await _postRepository.GetAllPostsAsync();
 
             var postsDto = _mapper.Map<List<PostDto>>(posts);
-         
             return Ok(postsDto);
         }
+        [Authorize]
         [HttpGet]
         [Route("{Id:int}")]
         public async Task<IActionResult> GetPostById([FromRoute] int Id)
@@ -55,73 +60,70 @@ namespace KCL_Web.Server.Controllers
         //    return CreatedAtAction("GetPostById", new { Id = post.PostId }, postDto);
         //}
 
-
-
-
-
-
-
-
-
-
+        [Authorize]
         [HttpPut]
         [Route("{Id:int}")]
-        public async Task<IActionResult> UpdatePostById([FromRoute] int Id, [FromBody] UpdatedPost updatedPost)
+        public async Task<IActionResult> UpdatePostById([FromForm] int Id, [FromForm] UpdatedPost updatedPost)
         {
-            var post = await _postRepository.UpdatePostAsync(Id, updatedPost);
-            if (post == null)
-            {
-                return NotFound();
-            }
-            return Ok(_mapper.Map<PostDto>(post));
+            
+                var post = await _postRepository.UpdatePostAsync(Id, updatedPost);
+
+                if (post == null)
+                {
+                    return NotFound();
+                }
+                return Ok(_mapper.Map<PostDto>(post));
+        
         }
+        [Authorize]
         [HttpDelete]
         [Route("{Id:int}")]
         public async Task<IActionResult> DeletePost([FromRoute] int Id)
         {
-            var post= await _postRepository.DeletePostAsync(Id);
-            if (post == null)
-            {
-                return NotFound();
+            
+                var post = await _postRepository.DeletePostAsync(Id);
+               
+                if (post == null)
+                {
+                    return NotFound();
+                }
+                return NoContent();
             }
-            return NoContent();
-        }
 
+
+        [Authorize]
         [HttpPost]
         public async Task<ActionResult<PostDto>> CreatePost([FromForm] AddingPost addingPost)
         {
-            if (!ModelState.IsValid)
+            try
             {
-                return BadRequest(ModelState);
+                var post = await _postRepository.CreatePostAsync(addingPost);
+                var postDto = _mapper.Map<PostDto>(post);
+                return Ok(post);
             }
-
-            if (addingPost.Image != null)
+            catch (Exception ex)
             {
-                addingPost.ImageUrl = await SaveImageAsync(addingPost.Image);
+                return BadRequest(ex.ToString());
             }
-
-            var post = await _postRepository.CreatePostAsync(addingPost);
-            var postDto = _mapper.Map<PostDto>(post);
-            return CreatedAtAction(nameof(GetPostById), new { id = post.PostId }, postDto);
         }
 
-        private async Task<string> SaveImageAsync(IFormFile image)
-        {
-            var uploadsFolder = Path.Combine(_environment.WebRootPath, "dist", "img");
-            if (!Directory.Exists(uploadsFolder))
-            {
-                Directory.CreateDirectory(uploadsFolder);
-            }
+        //private async Task<string> SaveImageAsync(IFormFile image)
+        //{
+        //    var uploadsFolder = Path.Combine(_environment.WebRootPath, "dist", "img");
+        //    if (!Directory.Exists(uploadsFolder))
+        //    {
+        //        Directory.CreateDirectory(uploadsFolder);
+        //    }
 
-            var uniqueFileName = Guid.NewGuid().ToString() + "_" + image.FileName;
-            var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+        //    var uniqueFileName = Guid.NewGuid().ToString() + "_" + image.FileName.Replace(" ", "_");
+        //    var filePath = Path.Combine(uploadsFolder, uniqueFileName);
 
-            using (var fileStream = new FileStream(filePath, FileMode.Create))
-            {
-                await image.CopyToAsync(fileStream);
-            }
+        //    using (var fileStream = new FileStream(filePath, FileMode.Create))
+        //    {
+        //        await image.CopyToAsync(fileStream);
+        //    }
 
-            return uniqueFileName;
-        }
+        //    return uniqueFileName;
+        //}
     }
 }
