@@ -2,6 +2,7 @@ using KCL_Web.Server.Dtos.Banner;
 using KCL_Web.Server.Interfaces;
 using KCL_Web.Server.Mappers;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace KCL_Web.Server.Controllers
 {
@@ -26,7 +27,7 @@ namespace KCL_Web.Server.Controllers
         }
 
         [HttpGet("{id:int}")]
-        public async Task<IActionResult> GetById(int id)
+        public async Task<IActionResult> GetById( int id)
         {
             var bannerModel = await _bannerRepo.GetByIdAsync(id);
             if (bannerModel == null)
@@ -35,25 +36,31 @@ namespace KCL_Web.Server.Controllers
             }
             return Ok(bannerModel.ToBannerDto());
         }
-
+        [Authorize]
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] CreateBannerRequestDto BannerDto)
+        public async Task<IActionResult> Create([FromForm] CreateBannerRequestDto BannerDto)
         {
-            var bannerModel = BannerDto.ToBannerFromCreateDto();
-            await _bannerRepo.CreateAsync(bannerModel);
-            return CreatedAtAction(nameof(GetById), new { id = bannerModel.BannerId }, bannerModel.ToBannerDto());
+            try
+            {
+                var banner = await _bannerRepo.CreateAsync(BannerDto);
+                var bannerModel = BannerDto.ToBannerFromCreateDto();
+                //await _bannerRepo.CreateAsync(banner);
+                //return CreatedAtAction(nameof(GetById), new { id = bannerModel.BannerId }, bannerModel.ToBannerDto());
+                return Ok(bannerModel);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
-
+        [Authorize]
         [HttpPut]
         [Route("{id:int}")]
-        public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateBannerRequestDto updateDto)
+        public async Task<IActionResult> Update([FromForm] int id, [FromForm] UpdateBannerRequestDto updateDto)
         {
-            if (id <= 0)
-            {
-                return BadRequest("Invalid id");
-            }
+           
 
-            var BannerModel = await _bannerRepo.UpdateAsync(id, updateDto);
+                var BannerModel = await _bannerRepo.UpdateAsync(id, updateDto);
 
             if (BannerModel == null)
             {
@@ -62,7 +69,7 @@ namespace KCL_Web.Server.Controllers
             return Ok(BannerModel.ToBannerDto());
         }
 
-
+        [Authorize]
         [HttpDelete]
         [Route("{id:int}")]
         public async Task<IActionResult> Delete([FromRoute] int id)

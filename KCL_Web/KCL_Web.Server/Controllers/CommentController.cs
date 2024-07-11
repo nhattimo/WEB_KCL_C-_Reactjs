@@ -1,6 +1,7 @@
 using KCL_Web.Server.Dtos.Comment;
 using KCL_Web.Server.Interfaces;
 using KCL_Web.Server.Mappers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KCL_Web.Server.Controllers
@@ -44,6 +45,7 @@ namespace KCL_Web.Server.Controllers
             return Ok(comment.ToCommentDto());
         }
 
+        [Authorize]
         [HttpPost("{stockId:int}")]
         public async Task<IActionResult> Create([FromRoute] int stockId, [FromBody] CreateCommentDto commentDto)
         {
@@ -57,6 +59,7 @@ namespace KCL_Web.Server.Controllers
             return CreatedAtAction(nameof(GetById), new { id = CommentModel.Id }, CommentModel.ToCommentDto());
         }
 
+        [Authorize]
         [HttpPut]
         [Route("{id:int}")]
         public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateCommentRequestDto updateComment)
@@ -70,6 +73,7 @@ namespace KCL_Web.Server.Controllers
             return Ok(comment.ToCommentDto());
         }
 
+        [Authorize]
         [HttpDelete]
         [Route("{id:int}")]
         public async Task<IActionResult> Delete([FromRoute] int id)

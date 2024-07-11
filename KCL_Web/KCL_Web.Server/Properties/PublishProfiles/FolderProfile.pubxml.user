@@ -4,8 +4,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project>
   <PropertyGroup>
-    <_PublishTargetUrl>E:\testweb</_PublishTargetUrl>
-    <History>True|2024-05-18T13:22:40.8924002Z;True|2024-05-18T20:20:32.3092544+07:00;</History>
+    <_PublishTargetUrl>\\14.241.120.229\qlpk\KCLDemo\web\deploy</_PublishTargetUrl>
+    <History>True|2024-07-10T10:01:47.5639755Z;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

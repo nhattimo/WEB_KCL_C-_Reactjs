@@ -4,9 +4,15 @@ using KCL_Web.Server.Models;
 using KCL_Web.Server.Repository;
 using KCL_Web.Server.Service;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
+using System.Configuration;
+using System.Net;
+using System.Security.Cryptography;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,13 +32,24 @@ builder.Services.AddControllers()
     });
 
 
+Host.CreateDefaultBuilder(args)
+            .ConfigureWebHostDefaults(webBuilder =>
+            {
+                webBuilder.UseKestrel(options =>
+                {
+                    options.Listen(IPAddress.Any, 5000); // Hoặc port bạn muốn sử dụng
+                });
+            });
 
 // 2.Đăng ký DbContext của Entity Framework Core:
 // Bạn đang đăng ký một đối tượng DbContext của Entity Framework Core 
 // vào container dịch vụ của ứng dụng ASP.NET Core, sử dụng cơ sở dữ liệu SQL Server.
+var HastConnet = builder.Configuration.GetConnectionString("DBWebKCLGroup");
+byte[] encryptedBytes = Convert.FromBase64String(HastConnet);
+byte[] plainBytes = ProtectedData.Unprotect(encryptedBytes, null, DataProtectionScope.CurrentUser);
 builder.Services.AddDbContext<KclinicKclWebsiteContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DBWebKCLGroup"));
+    options.UseSqlServer(Encoding.UTF8.GetString(plainBytes));
 });
 
 builder.Services.AddIdentity<AppUser, IdentityRole>(options =>
@@ -57,14 +74,14 @@ builder.Services.AddAuthentication(options =>
 {
     options.TokenValidationParameters = new TokenValidationParameters
     {
-        ValidateIssuer = true,
-        ValidIssuer = builder.Configuration["JWT:Issuer"],
-        ValidateAudience = true,
-        ValidAudience = builder.Configuration["JWT:Audience"],
+        ValidateIssuer = false,
+        ValidateAudience = false,
+        ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
-        IssuerSigningKey = new SymmetricSecurityKey(
-            System.Text.Encoding.UTF8.GetBytes(builder.Configuration["JWT:SigningKey"])
-        )
+        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+        ValidAudience = builder.Configuration["Jwt:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])),
+        ClockSkew = TimeSpan.Zero
     };
 });
 
@@ -72,6 +89,7 @@ builder.Services.AddAuthentication(options =>
 // Đây là cách đăng ký một repository (StockRepository) 
 // với một interface (IStockRepository) trong container dịch vụ. 
 // Điều này giúp giảm bớt sự phụ thuộc giữa các lớp và tạo điều kiện cho việc sử dụng Dependency Injection.
+builder.Services.AddTransient<IFileService, FileService>();
 builder.Services.AddScoped<IAccountRepository, AccountRepository>();
 
 builder.Services.AddScoped<IStockRepository, StockRepository>();
@@ -99,14 +117,35 @@ builder.Services.AddScoped<ITokenService, TokenService>();
 
 
 
-
 // Tạo ra một đối tượng ứng dụng (app) từ đối tượng builder đã được xây dựng trước đó.
 // Điều này là cần thiết để có thể tiếp tục cấu hình và chạy ứng dụng
 var app = builder.Build();
+app.UseCors(builder =>
+{
+    builder.AllowAnyOrigin()
+           .AllowAnyMethod()
+           .AllowAnyHeader();
+});
+
+// Serve static files from the dist folder
+
+var compositeFileProvider = new CompositeFileProvider(
+    new PhysicalFileProvider(Path.Combine(builder.Environment.ContentRootPath, "wwwroot", "upload")),
+    new PhysicalFileProvider(Path.Combine(builder.Environment.ContentRootPath, "wwwroot", "dist", "img"))
+);
+
+
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = compositeFileProvider,
+    RequestPath = "/api/img"
+});
 
 // Middleware này được sử dụng để chuyển hướng yêu cầu đến các tệp mặc định trong thư mục gốc của ứng dụng (ví dụ: index.html, default.html, ...).
 // Nếu người dùng truy cập trang web mà không chỉ định tên tệp cụ thể trong URL, thì middleware này sẽ tự động chuyển hướng yêu cầu đến tệp mặc định được cấu hình.
 app.UseDefaultFiles();
+
+
 
 
 // Middleware này được sử dụng để phục vụ các tệp tĩnh như hình ảnh, CSS, JavaScript, vv.
@@ -129,7 +168,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 // UseAuthorization() được sử dụng để kích hoạt middleware xác thực và phân quyền.
-app.UseAuthorization();
+//app.UseAuthorization();
 
 // MapControllers() được sử dụng để ánh xạ các yêu cầu tới các API Controller.
 app.MapControllers();

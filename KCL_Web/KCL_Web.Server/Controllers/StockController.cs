@@ -2,6 +2,8 @@ using KCL_Web.Server.Dtos.Stock;
 using KCL_Web.Server.Interfaces;
 using KCL_Web.Server.Mappers;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace KCL_Web.Server.Controllers
 {
@@ -72,8 +74,8 @@ namespace KCL_Web.Server.Controllers
             {
                 return NotFound();
             }
-
             return NoContent();
         }
+
     }
 }

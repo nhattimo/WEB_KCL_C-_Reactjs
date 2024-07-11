@@ -11,5 +11,6 @@ namespace KCL_Web.Server.Interfaces
         Task<Post> CreatePostAsync(AddingPost addingPostDto);
         Task<Post?> UpdatePostAsync(int Id, UpdatedPost updatedPostDto);
         Task<Post?> DeletePostAsync(int Id);
+
     }
 }

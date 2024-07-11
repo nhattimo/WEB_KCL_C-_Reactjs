@@ -1,6 +1,7 @@
 using KCL_Web.Server.Dtos.Navigation;
 using KCL_Web.Server.Interfaces;
 using KCL_Web.Server.Mappers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KCL_Web.Server.Controllers
@@ -39,6 +40,7 @@ namespace KCL_Web.Server.Controllers
             return Ok(navigation.ToNavigationDto());
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateNavigationRequestDto navigationDto)
         {
@@ -48,6 +50,7 @@ namespace KCL_Web.Server.Controllers
             return CreatedAtAction(nameof(GetById), new { id = navigationModel.NavId }, navigationModel.ToNavigationDto());
         }
 
+        [Authorize]
         [HttpPut]
         [Route("{id:int}")]
         public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateNavigationRequestDto updateDto)
@@ -68,6 +71,7 @@ namespace KCL_Web.Server.Controllers
 
         }
 
+        [Authorize]
         [HttpDelete]
         [Route("{id:int}")]
         public async Task<IActionResult> Delete([FromRoute] int id)

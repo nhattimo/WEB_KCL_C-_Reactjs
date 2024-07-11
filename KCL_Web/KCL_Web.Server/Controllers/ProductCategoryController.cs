@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using KCL_Web.Server.Dtos.ProductCategory;
 using KCL_Web.Server.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -39,6 +40,7 @@ namespace KCL_Web.Server.Controllers
             var productCategoryDto = _mapper.Map<ProductCategoryDto>(productCategory);
             return Ok(productCategoryDto);
         }
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> PostProductCategory([FromBody] AddingProductCategory addingProductCategoryDto)
         {
@@ -46,6 +48,7 @@ namespace KCL_Web.Server.Controllers
             var productCategoryDto = _mapper.Map<ProductCategoryDto>(productCategory);
             return CreatedAtAction("GetProductCategoryById", new { Id = productCategoryDto.Id }, productCategoryDto);
         }
+        [Authorize]
         [HttpPut]
         [Route("{Id:int}")]
         public async Task<IActionResult> UpdateProductCategoryById([FromRoute] int Id, [FromBody] UpdatingProductCategory updatingProductCategoryDto)
@@ -57,6 +60,7 @@ namespace KCL_Web.Server.Controllers
             }
             return Ok(_mapper.Map<ProductCategoryDto>(productCategory));
         }
+        [Authorize]
         [HttpDelete]
         [Route("{Id:int}")]
         public async Task<IActionResult> DeleteProductCategory([FromRoute] int Id)

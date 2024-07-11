@@ -2,6 +2,7 @@ using KCL_Web.Server.Dtos.Navigation;
 using KCL_Web.Server.Dtos.NavList;
 using KCL_Web.Server.Interfaces;
 using KCL_Web.Server.Mappers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KCL_Web.Server.Controllers
@@ -27,6 +28,7 @@ namespace KCL_Web.Server.Controllers
             return Ok(navListDto);
         }
 
+        [Authorize]
         [HttpGet("{id:int}")]
         public async Task<IActionResult> GetById([FromRoute] int id)
         {
@@ -38,6 +40,7 @@ namespace KCL_Web.Server.Controllers
             return Ok(navList.ToNavListDto());
         }
 
+        [Authorize]
         [HttpPost("{navigationId:int}")]
         public async Task<IActionResult> Creater([FromRoute] int navigationId, [FromBody] CreateNavListDto navListDto)
         {
@@ -51,6 +54,7 @@ namespace KCL_Web.Server.Controllers
             return CreatedAtAction(nameof(GetById), new { id = navigationModel.NavId }, navigationModel.ToNavListDto());
         }
 
+        [Authorize]
         [HttpPut]
         [Route("{id:int}")]
         public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateNavListRequestDto updateNavList)
@@ -64,6 +68,7 @@ namespace KCL_Web.Server.Controllers
             return Ok(navList.ToNavListDto());
         }
 
+        [Authorize]
         [HttpDelete]
         [Route("{id:int}")]
         public async Task<IActionResult> Delete([FromRoute] int id)

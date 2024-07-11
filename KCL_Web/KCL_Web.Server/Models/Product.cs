@@ -10,10 +10,11 @@ public partial class Product
 
     public string? Name { get; set; }
 
+    public string? IntroContent { get; set; }
     public DateTime? AddedTime { get; set; }
 
     public DateTime? UpdatedTime { get; set; }
-    public int? CatogoryId { get; set; }
+    //public int? CatogoryId { get; set; }
 
     public string? UrlImage { get; set; }
 
@@ -28,7 +29,7 @@ public partial class Product
     public virtual ProductCategory? Category { get; set; }
 
     // Khóa ngoại cho mối quan hệ một-nhiều với AppUser
-    public string? AppUserId { get; set; }
-    [ForeignKey("AppUserId")]
-    public virtual AppUser? AppUser { get; set; }
+    //public string? AppUserId { get; set; }
+    //[ForeignKey("AppUserId")]
+    //public virtual AppUser? AppUser { get; set; } 
 }

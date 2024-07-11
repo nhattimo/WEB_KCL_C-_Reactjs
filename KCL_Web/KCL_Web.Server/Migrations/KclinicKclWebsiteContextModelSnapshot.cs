@@ -17,7 +17,7 @@ namespace KCL_Web.Server.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.0")
+                .HasAnnotation("ProductVersion", "8.0.4")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -243,6 +243,9 @@ namespace KCL_Web.Server.Migrations
                     b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("IntroContent")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("PostDate")
                         .HasColumnType("datetime2");
 
@@ -311,6 +314,12 @@ namespace KCL_Web.Server.Migrations
                     b.Property<int?>("CategoryId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("IntroContent")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
@@ -319,6 +328,9 @@ namespace KCL_Web.Server.Migrations
 
                     b.Property<DateTime?>("UpdatedTime")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("UrlImage")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -442,13 +454,13 @@ namespace KCL_Web.Server.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "db062853-2999-462d-b77a-5b12e08837d3",
+                            Id = "f45fb86e-7310-45ce-898a-9378081af424",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "6a5e8357-1fa8-4d49-928b-c2988cbafc74",
+                            Id = "677934e9-3212-48ef-8ecb-15a8004e68fa",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -611,7 +623,7 @@ namespace KCL_Web.Server.Migrations
 
             modelBuilder.Entity("KCL_Web.Server.Models.Product", b =>
                 {
-                    b.HasOne("KCL_Web.Server.Models.AppUser", "AppUser")
+                    b.HasOne("KCL_Web.Server.Models.AppUser", null)
                         .WithMany("Products")
                         .HasForeignKey("AppUserId");
 
@@ -619,18 +631,14 @@ namespace KCL_Web.Server.Migrations
                         .WithMany("Products")
                         .HasForeignKey("CategoryId");
 
-                    b.Navigation("AppUser");
-
                     b.Navigation("Category");
                 });
 
             modelBuilder.Entity("KCL_Web.Server.Models.ProductCategory", b =>
                 {
-                    b.HasOne("KCL_Web.Server.Models.AppUser", "AppUser")
+                    b.HasOne("KCL_Web.Server.Models.AppUser", null)
                         .WithMany("ProductCategorys")
                         .HasForeignKey("AppUserId");
-
-                    b.Navigation("AppUser");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
